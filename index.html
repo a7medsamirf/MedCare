@@ -1,8 +1,8 @@
 <!--A Design by Medala Solution
 Author: Ahmed Samir
-Template Name: Medala Solution | Personal Portfolio HTML5 Template
+Template Name: MedCare | Personal Care System Template
 Author URL: https://www.facebook.com/a7med.samir.f
-License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
+License URL: https://github.com/a7medsamirf/MedCare/blob/master/LICENSE
 -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -14,12 +14,13 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
     <title>MedCare</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="assets/css/mdb.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="assets/css/addons/datatables.min.css" />
     <!-- custom styles (optional) -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -41,7 +42,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
             <i class="fal fa-cog fa-spin"></i>
         </span>
         <div class="header-theme">
-            <h5 class="m-t-0">Skins</h5>
+            <h5 class="m-t-0 font-weight-bold">Skins</h5>
 
             <ul class="switch-colors">
                 <div class="row">
@@ -54,13 +55,11 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                         <li data-color="#0992ad" data-background="#20c6e6"></li>
                         <li data-color="#079992" data-background="#02d4ca"></li>
                         <li data-color="#13547a" data-background="#80d0c7"></li>
-
-
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <h5 class="m-t-0">Sidebar Background</h5>
+                        <h5 class="m-t-0 font-weight-bold">Sidebar Background</h5>
                     </div>
                     <div class="form-group col-md-12">
                         <a href="#" data-theme="light-theme" class="theme light-theme"></a>
@@ -71,7 +70,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                         <a href="#" data-theme="cool-theme" class="theme cool-theme"></a>
                     </div>
                     <div class="form-group col-md-12">
-                        <h5 class="m-t-0">Sidebar Image</h5>
+                        <h5 class="m-t-0 font-weight-bold">Sidebar Image</h5>
                     </div>
                     <div class="form-group col-md-12">
                         <a href="#" data-bg="bg1" class="theme theme-bg selected"></a>
@@ -82,10 +81,27 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
 
                     </div>
                     <div class="form-group col-md-12">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="toggle-bg" checked="">
-                            <label class="custom-control-label" for="toggle-bg">Background image</label>
-                        </div>
+                            <!-- Material switch -->
+                            <div class="switch">
+                                <div class="form-group col-md-12">
+                                    <h5 class="m-t-0 font-weight-bold">Sidebar Image</h5>
+                                </div>
+                                <label id="toggle-bg"> Off <input type="checkbox"> <span class="lever"></span> On </label>
+                            </div>
+                        <div class="buttons text-center">
+                            <!-- Group of material radios - option 1 -->
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="white-theme" name="groupOfMaterialRadios" checked>
+                                <label class="form-check-label" for="white-theme">White theme</label>
+                            </div>
+                            
+                            <!-- Group of material radios - option 2 -->
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="dark-theme" name="groupOfMaterialRadios" >
+                                <label class="form-check-label" for="dark-theme">Dark theme</label>
+                            </div>                        
+                          </div>
+
                     </div>
                 </div>
 
@@ -100,7 +116,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
-                    <h1 class="w">عيادتك</h1>
+                    <h1 class="w">MedCare</h1>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -140,66 +156,143 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                                 <span class="menu-text">Dashboard </span>
                             </a>
                         </li>
+                        <li class="">
+                            <a href="app-appointment.html">
+                                <i class="far fa-calendar-check"></i>
+                                <span class="menu-text">Appointment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-chat.html">
+                                <i class="far fa-comments"></i>
+                                <span class="menu-text">Chat App</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Chandler.html">
+                                <i class="fa fa-calendar"></i>
+                                <span class="menu-text">Calendar</span>
+                            </a>
+                        </li>
                         <li class="header-menu">
                             <span>MEDICINE</span>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
+                                <i class="fas fa-user-md"></i>
+                                <span class="menu-text">Doctors</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li><a href="all-doctors.html">All Doctor</a> </li>
+                                    <li><a href="add-doctor.html">Add Doctor</a> </li>
+                                    <li><a href="edit-doctor.html">Edit Doctor</a> </li>
+                                    <li><a href="doctor-profile.html">Doctor Profile</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-users"></i>
+                                <span class="menu-text">Other Staff</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li><a href="all-staffs.html">All Staff</a> </li>
+                                    <li><a href="add-staff.html">Add Staff</a> </li>
+                                    <li><a href="edit-staff.html">Edit Staff</a> </li>
+                                    <li><a href="staff-profile.html">Staff Profile</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
                                 <i class="fas fa-user-injured"></i>
-                                <span class="menu-text">المرضى</span>
+                                <span class="menu-text">Patients</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li>
-                                        <a href="ViewPatient.html">اسماء المرضى
-                                        </a>
-                                    </li>
+                                    <li><a href="all-patients.html">All Patients</a> </li>
+                                    <li><a href="add-patient.html">Add Patient</a> </li>
+                                    <li><a href="edit-patient.html">Edit Patient</a> </li>
+                                    <li><a href="patient-profile.html">Patient Profile</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                  
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-bed"></i>
+                                <span class="menu-text">Room Allotment</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li><a href="room-allotment.html">Rooms Alloted </a> </li>
+                                    <li><a href="add-room.html">New Allotment</a> </li>
+                                    <li><a href="edit-room.html">Edit Allotment</a> </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="menu-text">E-commerce</span>
+                                <i class="far fa-money-bill-alt"></i>
+                                <span class="menu-text">Payments</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li><a href="payments.html">Payments </a> </li>
+                                    <li><a href="add-payment.html">Add Payments</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                 
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span class="menu-text">Maps</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Products
-
-                                        </a>
+                                        <a href="#">Google maps</a>
                                     </li>
                                     <li>
-                                        <a href="#">Orders</a>
+                                        <a href="#">Open street map</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Credit cart</a>
-                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>UI KIT</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-copy"></i>
+                                <span class="menu-text"> Components</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li><a href="button.html">Buttons </a> </li>
+                                    <li><a href="tab.html">Tabs </a> </li>
+                                    <li><a href="datepicker.html">DatePicker</a> </li>
+  
                                 </ul>
                             </div>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
-                                <i class="far fa-gem"></i>
-                                <span class="menu-text">Components</span>
+                                <i class="fas fa-copy"></i>
+                                <span class="menu-text">Extra pages</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li>
-                                        <a href="alert.html">Alerts</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Panels</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
-                                    </li>
+                                    <li><a href="login.html">Login </a> </li>
+                                    <li><a href="sign-up.html">Sign Up </a> </li>
+                                    <li><a href="forgot-password.html">Forgot Password </a> </li>
+                                    <li><a href="profile.html">Profile </a> </li>
+                                    <li><a href="contact.html">Contact Us </a> </li>
+                                    <li><a href="Error-404.html">404 Page </a> </li>
+  
                                 </ul>
                             </div>
                         </li>
@@ -225,32 +318,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-globe"></i>
-                                <span class="menu-text">Maps</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Google maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Open street map</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header-menu">
-                            <span>UI KIT</span>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-calendar"></i>
-                                <span class="menu-text">Calendar</span>
-                            </a>
-                        </li>
+                     
                         <li>
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -416,7 +484,8 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                 <div class="search-field d-none d-md-block ml-5">
                     <form class="d-flex align-items-center" action="#">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-transparent border-0" placeholder="Search here...">
+                            <input type="text" class="form-control bg-transparent border-0"
+                                placeholder="Search here...">
                             <div class="input-group-prepend bg-transparent">
                                 <i class="far fa-search fa-lg"></i>
                             </div>
@@ -445,20 +514,20 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                             aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="profile.html">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                الملف الشخصى
+                                Profile
                             </a>
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                الاعدادات
+                                Settings
                             </a>
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="login.html" data-toggle="modal" data-target="#logoutModal">
+                            <a class="dropdown-item" href="login.html">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                تسجيل الخروج
+                                Logout
                             </a>
                         </div>
                     </li>
@@ -470,24 +539,62 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
 
             <div id="overlay" class="overlay"></div>
             <div class="container-fluid p-3">
-                <!--Section: Content-->
-                <section class="">
+                <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                    <h1 class="h3 mb-0 text-gray-800 breadcrumb-icone"><i
+                            class="fas fa-tachometer-alt mr-2"></i>Dashboard</h1>
+                    <nav aria-label="breadcrumb d-none d-sm-inline-block">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </nav>
+                </div>
+                <section class="dashboard-content">
 
                     <!--Grid row-->
                     <div class="row">
 
                         <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
 
                             <!-- Admin card -->
                             <div class="card mt-3">
 
                                 <div class="">
                                     <i
-                                        class="far fa-money-bill-alt fa-lg primary-color z-depth-2 p-4 mr-3 mt-n3 rounded text-white"></i>
+                                        class="fas fa-users fa-lg primary-color z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                                     <div class="float-right text-right p-3">
-                                        <p class="text-uppercase text-muted mb-1">المرضى</p>
-                                        <h5 class="font-weight-bold text-muted mb-0">عرض سجلات المرضى</h5>
+                                        <p class="text-muted mb-1">Appointments</p>
+                                        <h4 class="font-weight-bold mb-0">450</h4>
+                                    </div>
+                                </div>
+
+                                <div class="card-body pt-0">
+                                    <div class="progress md-progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 45%"
+                                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <p class="card-text">45% Increase in 28 Days</p>
+                                </div>
+
+                            </div>
+                            <!-- Admin card -->
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+
+                            <!-- Admin card -->
+                            <div class="card mt-3">
+
+                                <div class="">
+                                    <i
+                                        class="fas fa-user-injured fa-lg warning-color-dark z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+                                    <div class="float-right text-right p-3">
+                                        <p class="text-muted mb-1">New Patients</p>
+                                        <h4 class="font-weight-bold mb-0">240</h4>
                                     </div>
                                 </div>
 
@@ -496,7 +603,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
                                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="card-text">أفضل من الأسبوع الماضي (75%)</p>
+                                    <p class="card-text">75% Increase in 28 Days</p>
                                 </div>
 
                             </div>
@@ -504,19 +611,17 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
 
                         </div>
                         <!--Grid column-->
-
                         <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                             <!-- Admin card -->
                             <div class="card mt-3">
 
                                 <div class="">
                                     <i
-                                        class="fas fa-chart-line fa-lg teal z-depth-2 p-4 mr-3 mt-n3 rounded text-white"></i>
+                                        class="fal fa-temperature-low fa-lg teal z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                                     <div class="float-right text-right p-3">
-                                        <p class="text-uppercase text-muted mb-1"><small>حجز اليوم</small></p>
-                                        <h4 class="font-weight-bold mb-0">حجوزات</h4>
+                                        <p class="text-muted mb-1">Operations</p>
+                                        <h4 class="font-weight-bold mb-0">3534</h4>
                                     </div>
                                 </div>
 
@@ -525,7 +630,7 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                                         <div class="progress-bar bg-danger" role="progressbar" style="width: 46%"
                                             aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="card-text">أسوأ من الأسبوع الماضي (46%)</p>
+                                    <p class="card-text">Worse than last week (46%)</p>
                                 </div>
 
                             </div>
@@ -535,26 +640,26 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                         <!--Grid column-->
 
                         <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
 
                             <!-- Admin card -->
                             <div class="card mt-3">
 
                                 <div class="">
                                     <i
-                                        class="fas fa-chart-pie fa-lg purple z-depth-2 p-4 mr-3 mt-n3 rounded text-white"></i>
+                                        class="fas fa-dollar-sign fa-lg success-color z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                                     <div class="float-right text-right p-3">
-                                        <p class="text-uppercase text-muted mb-1"><small>traffic</small></p>
-                                        <h4 class="font-weight-bold mb-0">656 234</h4>
+                                        <p class="text-muted mb-1">Hospital Earning</p>
+                                        <h4 class="font-weight-bold mb-0">89,921$</h4>
                                     </div>
                                 </div>
 
                                 <div class="card-body pt-0">
                                     <div class="progress md-progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 31%"
-                                            aria-valuenow="31" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
+                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <p class="card-text">Better than last week (31%)</p>
+                                    <p class="card-text">Better than last week (60%)</p>
                                 </div>
 
                             </div>
@@ -566,63 +671,493 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
                     </div>
                     <!--Grid row-->
 
-                </section>
-                <!--Section: Content-->
-
-
-                <!-- Section -->
-                <section>
 
                     <div class="row">
-
-                        <!-- Grid column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <div class="card">
-                                <div class="card-body p-0">
-                                    <!-- Chart -->
-                                    <div class="view view-cascade gradient-card-header blue-gradient p-4 rounded">
-
-                                        <canvas id="lineChart" height="175"></canvas>
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-md-7 col-sm-12">
+                            <div class="card  mb-3">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold">Hospital Survey </h6>
+                                    <div class="dropdown no-arrow">
+                                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="lineChart"></canvas>
 
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <!-- Grid column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <div class="card">
-                                <div class="card-body p-0">
-                                    <!-- Chart -->
-                                    <div class="view view-cascade gradient-card-header blue-gradient p-4 rounded">
-
-                                        <canvas id="lineChart" height="175"></canvas>
-
+                        <!-- Pie Chart -->
+                        <div class="col-xl-4 col-md-5 col-sm-12">
+                            <div class="card mb-3">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold">Hospital Survey  </h6>
+                                    <div class="dropdown no-arrow">
+                                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <canvas id="pieChart2" height="315"></canvas>
+
+                                </div>
                             </div>
-
                         </div>
-
-                        <!-- Grid column -->
-
                     </div>
 
-                </section>
-                <!-- Section -->
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card mb-3">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold">Last Appointments</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
 
+                                            <thead>
+                                              <tr>
+                                                <th class="th-sm">Name
+                                                </th>
+                                                <th class="th-sm">Email
+                                                </th>
+                                                <th class="th-sm">Date
+                                                </th>
+                                                <th class="th-sm">Visit time	
+                                                </th>
+                                                <th class="th-sm">Number
+                                                </th>
+                                                <th class="th-sm">Doctor
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Olivia</td>
+                                                <td>olivia@gmail.com</td>
+                                                <td>26 Dec 2018</td>
+                                                <td>17:30 - 18:00</td>
+                                                <td>0112555709</td>
+                                                <td>Dr. Emma</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Sophia</td>
+                                                <td>sophia@gmail.com</td>
+                                                <td>13 Oct 2018</td>
+                                                <td>10:00 - 10:153</td>
+                                                <td>0112555709</td>
+                                                <td>Dr. Noah</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Noah</td>
+                                                <td>noah@gmail.co</td>
+                                                <td>2 Jul 2018</td>
+                                                <td>10:00 - 10:15</td>
+                                                <td>0112555709</td>
+                                                <td>Dr. James</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Liam</td>
+                                                <td>liam@gmail.com</td>
+                                                <td>15 Jun 2018</td>
+                                                <td>17:30 - 18:00</td>
+                                                <td>0112555709</td>
+                                                <td>Dr. Liam</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- Card -->
+                            <div class="card weather-card mb-3">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold">Weather</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <!-- Card content -->
+                                <div class="card-body pb-5">
 
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold">Warsaw</h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Mon, 12:30 PM, Mostly Sunny</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="display-1 degree">23</p>
+                                        <i class="fas fa-sun-o fa-5x pt-3 amber-text"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <p><i class="fas fa-tint fa-lg text-info pr-2"></i>3% Precipitation</p>
+                                        <p><i class="fas fa-leaf fa-lg grey-text pr-2"></i>21 km/h Winds</p>
+                                    </div>
+                                    <div class="progress md-progress">
+                                        <div class="progress-bar black" role="progressbar" style="width: 40%"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <ul class="list-unstyled d-flex justify-content-between font-small text-muted mb-4">
+                                        <li class="pl-4">8AM</li>
+                                        <li>11AM</li>
+                                        <li>2PM</li>
+                                        <li>5PM</li>
+                                        <li class="pr-4">8PM</li>
+                                    </ul>
 
+                                    <div class="collapse-content">
 
+                                        <div class="collapse" id="collapseExample">
 
+                                            <table class="table table-borderless table-sm mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Tuesday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">24&deg;<span
+                                                                    class="text-muted">/12&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-sun fa-lg amber-text"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Wednesday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">19&deg;<span
+                                                                    class="text-muted">/10&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-cloud-sun-rain fa-lg text-info"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Thursday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">23&deg;<span
+                                                                    class="text-muted">/15&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-sun fa-lg amber-text"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Friday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">26&deg;<span
+                                                                    class="text-muted">/19&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-sun fa-lg amber-text"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Saturday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">20&deg;<span
+                                                                    class="text-muted">/16&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-cloud fa-lg text-info"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-weight-normal align-middle">Sunday</td>
+                                                        <td class="float-right font-weight-normal">
+                                                            <p class="mb-1">22&deg;<span
+                                                                    class="text-muted">/13&deg;</span></p>
+                                                        </td>
+                                                        <td class="float-right mr-3">
+                                                            <i class="fas fa-cloud-sun fa-lg text-info"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+                                        <hr class="">
+
+                                        <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 deep-purple-text collapsed"
+                                            data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample"></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="card card-list">
+                                <div class="card-header white d-flex justify-content-between align-items-center py-3">
+                                    <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-clipboard-list pr-2"></i>To Do List</p>
+                                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                                        <li><i class="far fa-window-minimize fa-sm pl-3"></i></li>
+                                        <li><i class="fas fa-times fa-sm pl-3"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li
+                                            class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked2">
+                                                    <label class="form-check-label" for="materialChecked2"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Design a nice theme</span></p>
+                                                <span class="badge badge-danger ml-3"><i class="far fa-clock pr-1"></i>2
+                                                    mins</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked3">
+                                                    <label class="form-check-label" for="materialChecked3"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Make the theme responsive</span>
+                                                </p>
+                                                <span class="badge badge-info ml-3"><i class="far fa-clock pr-1"></i>4
+                                                    hours</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked4">
+                                                    <label class="form-check-label" for="materialChecked4"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Let theme shine like a
+                                                        star</span>
+                                                </p>
+                                                <span class="badge badge-warning ml-3"><i
+                                                        class="far fa-clock pr-1"></i>1 day</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked5">
+                                                    <label class="form-check-label" for="materialChecked5"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Let theme shine like a
+                                                        star</span>
+                                                </p>
+                                                <span class="badge badge-success ml-3"><i
+                                                        class="far fa-clock pr-1"></i>1 week</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked6">
+                                                    <label class="form-check-label" for="materialChecked6"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Check your messages and
+                                                        notifications</span></p>
+                                                <span class="badge badge-primary ml-3"><i
+                                                        class="far fa-clock pr-1"></i>1 week</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center pt-2 pb-1">
+                                            <div class="d-inline-flex">
+                                                <div class="form-check pl-0">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="materialChecked7">
+                                                    <label class="form-check-label" for="materialChecked7"></label>
+                                                </div>
+                                                <p class="mb-0"><span class="text">Let theme shine like a
+                                                        star</span>
+                                                </p>
+                                                <span class="badge badge-light ml-3"><i class="far fa-clock pr-1"></i>1
+                                                    month</span>
+                                            </div>
+                                        </li>
+                                        <li
+                                        class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                        <div class="d-inline-flex">
+                                            <div class="form-check pl-0">
+                                                <input type="checkbox" class="form-check-input"
+                                                    id="materialChecked4">
+                                                <label class="form-check-label" for="materialChecked4"></label>
+                                            </div>
+                                            <p class="mb-0"><span class="text">Let theme shine like a
+                                                    star</span>
+                                            </p>
+                                            <span class="badge badge-warning ml-3"><i
+                                                    class="far fa-clock pr-1"></i>1 day</span>
+                                        </div>
+                                    </li>
+                                    <li
+                                    class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                    <div class="d-inline-flex">
+                                        <div class="form-check pl-0">
+                                            <input type="checkbox" class="form-check-input"
+                                                id="materialChecked3">
+                                            <label class="form-check-label" for="materialChecked3"></label>
+                                        </div>
+                                        <p class="mb-0"><span class="text">Make the theme responsive</span>
+                                        </p>
+                                        <span class="badge badge-info ml-3"><i class="far fa-clock pr-1"></i>4
+                                            hours</span>
+                                    </div>
+                                </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="card card-list">
+                                <div class="card-header white d-flex justify-content-between align-items-center py-3">
+                                    <p class="h5-responsive font-weight-bold mb-0">Patients Status </p>
+                                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                                        <li><i class="far fa-window-minimize fa-sm pl-3"></i></li>
+                                        <li><i class="fas fa-times fa-sm pl-3"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Patients ID</th>
+                                                <th scope="col">Adress</th>
+                                                <th scope="col">Priority</th>
+                                                <th scope="col">Progress</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR9842</a></th>
+                                                <td>123 6th St. Melbourne, FL 32904</td>
+                                                <td><span class="badge badge-success">Low</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                       
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR7429</a></th>
+                                                <td>4 Shirley Ave. West Chicago, IL 60185</td>
+                                                <td><span class="badge badge-danger">High</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar2" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR1848</a></th>
+                                                <td>123 6th St. Melbourne, FL 32904</td>
+                                                <td><span class="badge badge-warning">Medium</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar3" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR1848</a></th>
+                                                <td>123 6th St. Melbourne, FL 32904</td>
+                                                <td><span class="badge badge-warning">Medium</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar4" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR7429</a></th>
+                                                <td>70 Bowman St. South Windsor, CT 06074</td>
+                                                <td><span class="badge badge-danger">High</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar5" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a class="text-primary">OR9842</a></th>
+                                                <td>123 6th St. Melbourne, FL 32904</td>
+                                                <td><span class="badge badge-success">Low</span></td>
+                                                <td class="pt-2 pb-0"><canvas id="bar6" width="40" height="40"></canvas>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </main>
-        <!-- page-content" -->
+            </section>
+
+
+
+    </div>
+    </div>
+    </main>
+    <!-- page-content" -->
     </div>
     <!-- page-wrapper -->
-
 
 
 
@@ -635,6 +1170,8 @@ License URL: https://github.com/a7medsamirf/Medala-Solution/blob/master/LICENSE
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <!-- full screen JavaScript -->
     <script type="text/javascript" src="assets/js/jquery.full.screen.min.js"></script>
+    <!-- datatables JavaScript -->
+    <script type="text/javascript" src="assets/js/addons/datatables.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="assets/js/mdb.min.js"></script>
     <!-- Custom JavaScript -->

@@ -1457,7 +1457,8 @@
 }
 
 .grey.darken-3 {
-  background-color: #424242 !important;
+/*   background-color: #424242 !important;
+ */  background-color: #191f28 !important;
 }
 
 .grey.darken-4 {
@@ -1647,7 +1648,8 @@ ul.stepper li.warning a .circle {
 }
 
 .unique-color-dark {
-  background-color: #1c2331 !important;
+/*   background-color: #1c2331 !important;
+ */  background-color: #1c222c !important;
 }
 
 .special-color {
@@ -9694,8 +9696,9 @@ table.table a.btn.btn-black {
 .card {
   font-weight: 400;
   border: 0;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .card[class*="border"] {
