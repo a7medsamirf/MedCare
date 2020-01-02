@@ -11374,7 +11374,7 @@ body.scrollable {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #dadce0;
+  border: 1px solid #8182a8;
   border-radius: 4px;
   background-color: transparent;
   -webkit-box-sizing: border-box;
@@ -16487,6 +16487,7 @@ label.btn input[type="radio"]:not(:checked)+label,
 label.btn input[type="radio"]:checked+label {
   position: relative;
   padding-left: 35px;
+  font-size: 20px;
   cursor: pointer;
   display: inline-block;
   height: 1.5625rem;
@@ -16637,6 +16638,7 @@ label.btn input[type="radio"]:checked+label:after .disabled-material {
 label.btn input[type="checkbox"]+label {
   position: relative;
   padding-left: 35px;
+  font-size: 20px;
   cursor: pointer;
   display: inline-block;
   height: 1.5625rem;
@@ -17007,7 +17009,7 @@ label.btn input[type="checkbox"]:disabled:checked+label:after {
 }
 
 .select-wrapper.md-form.md-outline input.select-dropdown {
-  padding: .375rem .75rem;
+  padding: 1.3rem 0.75rem;
   color: #495057;
 }
 
@@ -21000,7 +21002,9 @@ ul.stepper li.completed a .white-skin .circle {
 .white-skin .select-wrapper.colorful-select.md-form .dropdown-content li.active,
 .white-skin .select-wrapper.colorful-select.md-form .dropdown-content li a,
 .white-skin .select-wrapper.colorful-select.md-form .dropdown-content li span:hover {
-  background-color: #4285F4 !important;
+  color: #fff !important;
+  background-color: var(--maincolor);
+  background: linear-gradient(40deg, var(--maincolor), var(--mainbackground)) !important;
 }
 
 .white-skin .select-wrapper.colorful-select.md-form .dropdown-content li.disabled.active {

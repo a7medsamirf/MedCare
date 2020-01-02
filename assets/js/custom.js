@@ -9,30 +9,70 @@ Version: 1.0
 NOTE: This is active js file of the template.
 
 ****************************************/
+/* 
+document.body.style.webkitTransform =         // Chrome, Opera, Safari
+  document.body.style.msTransform =           // IE 9
+  document.body.style.transform = 'scale(0.85)'; */
+
+/*global $ , alert, console*/
 $('#white-theme').on('click', function () {
   $('footer').removeClass('unique-color-dark').addClass('white-color');
-  $('nav').removeClass('unique-color-dark').addClass('white-color');
+  $('.navbar').removeClass('unique-color-dark').addClass('white-color');
   $('.card-header').removeClass('unique-color-dark').addClass('white-color');
   $('.show').removeClass('unique-color-dark').addClass('white-color');
   $('.card').removeClass('unique-color-dark').addClass('white-color');
   $('.card').removeClass('unique-color-dark').addClass('white-color');
   $('.fixed-menu').removeClass('unique-color-dark').addClass('white-color');
-  $('body').removeClass('grey darken-3');
-  $('body').removeClass('white-text');
+  $('.sidebar-footer').removeClass('grey darken-3').addClass('white-color');
+  $('.sidebar-content').removeClass('unique-color-dark').addClass('white-color');
+  $('body').removeClass('grey darken-3').removeClass('white-text');
 });
 
 $('#dark-theme').on('click', function () {
   $('footer').removeClass('white-color').addClass('unique-color-dark');
-  $('nav').removeClass('white-color').addClass('unique-color-dark');
+  $('.navbar').removeClass('white-color').addClass('unique-color-dark');
   $('.card-header').removeClass('white-color').addClass('unique-color-dark');
   $('.show').removeClass('white-color').addClass('unique-color-dark');
   $('.card').removeClass('white-color').addClass('unique-color-dark');
   $('.fixed-menu').removeClass('white-color').addClass('unique-color-dark');
+  $('.sidebar-footer').removeClass('white-color').addClass('grey darken-3');
+  $('.sidebar-content').removeClass('white-color').addClass('unique-color-dark');
   $('.breadcrumb').addClass('white-color');
-
-  $('body').addClass('grey darken-3');
+  $('body').addClass('white-text').addClass('grey darken-3');
 });
-/*global $ , alert, console*/
+
+// collapse button in panel
+$(document).on('click', '.card .tools .t-collapse', function () {
+  var el = $(this).parents(".card").children(".card-body");
+  if ($(this).hasClass("fa-chevron-down")) {
+    $(this).removeClass("fa-chevron-down").addClass("fa-chevron-up");
+    el.slideUp(200);
+  } else {
+    $(this).removeClass("fa-chevron-up").addClass("fa-chevron-down");
+    el.slideDown(200);
+  }
+});
+
+//close button in panel 
+$(document).on('click', '.card .tools .t-close', function () {
+  $(this).parents(".card").parent().remove();
+});
+
+// refresh button in panel
+$('.box-refresh').on('click', function (br) {
+  br.preventDefault();
+  $("<div class='refresh-block'><span class='refresh-loader'><i class='fa fa-spinner fa-spin'></i></span></div>").appendTo($(this).parents('.tools').parents('.card-head').parents('.card'));
+  setTimeout(function () {
+    $('.refresh-block').remove();
+  }, 1000);
+});
+
+// Material Select Initialization
+$(document).ready(function () {
+  $('.mdb-select').materialSelect();
+});
+// Data Picker Initialization
+$('.datepicker').pickadate();
 
 jQuery(function ($) {
 
@@ -61,7 +101,7 @@ jQuery(function ($) {
   });
 
   //switch between themes 
-  var themes = "default-theme legacy-theme chiller-theme ice-theme cool-theme light-theme";
+  var themes = "dark-theme legacy-theme chiller-theme ice-theme cool-theme light-theme";
   $('[data-theme]').click(function () {
     $('[data-theme]').removeClass("selected");
     $(this).addClass("selected");
@@ -91,15 +131,15 @@ jQuery(function ($) {
   });
 
   //custom scroll bar is only used on desktop
-/*   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $(".sidebar-content").mCustomScrollbar({
-      axis: "y",
-      autoHideScrollbar: true,
-      scrollInertia: 300
-    });
-    $(".sidebar-content").addClass("desktop");
+  /*   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $(".sidebar-content").mCustomScrollbar({
+        axis: "y",
+        autoHideScrollbar: true,
+        scrollInertia: 300
+      });
+      $(".sidebar-content").addClass("desktop");
 
-  } */
+    } */
 
 });
 
@@ -129,14 +169,14 @@ $('.fixed-menu .show').on('click', function () {
 
     $('body').animate({
 
-      paddingright: '300px'
+      paddingright: '280px'
 
     }, 50);
   } else {
 
     $(this).parent('.fixed-menu').animate({
 
-      right: '-300px'
+      right: '-280px'
 
     }, 700);
 
@@ -412,11 +452,11 @@ jQuery(function ($) {
   var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
-      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      labels: ["Red", "Green", "Yellow"],
       datasets: [{
-        data: [300, 50, 100, 40, 120],
-        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        data: [100, 100, 100],
+        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
+        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
       }]
     },
     options: {
@@ -466,5 +506,4 @@ jQuery(function ($) {
 $(document).ready(function () {
   $('#dtBasicExample').DataTable();
   $('.dataTables_length').addClass('bs-select');
-  });
-
+});
