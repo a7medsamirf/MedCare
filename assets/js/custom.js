@@ -58,6 +58,11 @@ $(document).on('click', '.card .tools .t-close', function () {
   $(this).parents(".card").parent().remove();
 });
 
+//file-upload
+$(document).ready(function () {
+$('.file-upload').file_upload();
+});
+
 // refresh button in panel
 $('.box-refresh').on('click', function (br) {
   br.preventDefault();
@@ -71,8 +76,11 @@ $('.box-refresh').on('click', function (br) {
 $(document).ready(function () {
   $('.mdb-select').materialSelect();
 });
+
 // Data Picker Initialization
+$(document).ready(function () {
 $('.datepicker').pickadate();
+});
 
 jQuery(function ($) {
 
@@ -91,9 +99,11 @@ jQuery(function ($) {
   });
 
   //toggle sidebar
+  $(document).ready(function () {
   $("#toggle-sidebar").click(function () {
     $(".page-wrapper").toggleClass("toggled");
   });
+});
 
   //toggle sidebar overlay
   $("#overlay").click(function () {
@@ -507,3 +517,4 @@ $(document).ready(function () {
   $('#dtBasicExample').DataTable();
   $('.dataTables_length').addClass('bs-select');
 });
+
