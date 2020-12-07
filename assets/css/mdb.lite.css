@@ -2,7 +2,7 @@
 
 /*!
  * Material Design for Bootstrap 4
- *   Version: MDB LITE 4.11.0
+ *   Version: MDB LITE 4.19.1
  * 
  * 
  *   Copyright: Material Design for Bootstrap
@@ -2019,41 +2019,6 @@ button.bg-light:focus {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 200;
-    src: local(Roboto Thin), url(../font/roboto/Roboto-Thin.eot);
-    src: url(../font/roboto/Roboto-Thin.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Thin.woff2) format("woff2"), url(../font/roboto/Roboto-Thin.woff) format("woff"), url(../font/roboto/Roboto-Thin.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 300;
-    src: local(Roboto Light), url(../font/roboto/Roboto-Light.eot);
-    src: url(../font/roboto/Roboto-Light.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Light.woff2) format("woff2"), url(../font/roboto/Roboto-Light.woff) format("woff"), url(../font/roboto/Roboto-Light.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 400;
-    src: local(Roboto Regular), url(../font/roboto/Roboto-Regular.eot);
-    src: url(../font/roboto/Roboto-Regular.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Regular.woff2) format("woff2"), url(../font/roboto/Roboto-Regular.woff) format("woff"), url(../font/roboto/Roboto-Regular.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 500;
-    src: url(../font/roboto/Roboto-Medium.eot);
-    src: url(../font/roboto/Roboto-Medium.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Medium.woff2) format("woff2"), url(../font/roboto/Roboto-Medium.woff) format("woff"), url(../font/roboto/Roboto-Medium.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 700;
-    src: url(../font/roboto/Roboto-Bold.eot);
-    src: url(../font/roboto/Roboto-Bold.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Bold.woff2) format("woff2"), url(../font/roboto/Roboto-Bold.woff) format("woff"), url(../font/roboto/Roboto-Bold.ttf) format("truetype")
 }
 
 body {
@@ -6408,6 +6373,7 @@ table.table a.btn.btn-black {
     background: linear-gradient(#5ed1fc, #3647b3)
 }
 
+.btn-warning:focus,
 .btn-warning:not(:disabled):not(.disabled).active,
 .btn-warning:not(:disabled):not(.disabled):active,
 .show>.btn-warning.dropdown-toggle {
@@ -6458,6 +6424,22 @@ table.table a.btn.btn-black {
 
 .dropdown .dropdown-menu .dropdown-item:active {
     background-color: #757575
+}
+
+.dropdown-submenu {
+    position: relative
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 1px;
+    border-radius: 0 6px 6px 6px
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block
 }
 
 .md-form.input-group label {
@@ -6940,6 +6922,14 @@ table.table a.btn.btn-black {
 body.modal-open {
     padding-right: 0 !important;
     overflow: auto
+}
+
+body.modal-open .fixed-top {
+    padding-right: 1rem !important
+}
+
+body.modal-open .fixed-bottom {
+    padding-right: 0 !important
 }
 
 body.scrollable {
@@ -7453,6 +7443,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default),
 .md-form input[type="number"]:not(.browser-default),
 .md-form input[type="search"]:not(.browser-default),
+.md-form input[type="phone"]:not(.browser-default),
 .md-form input[type="search-md"],
 .md-form textarea.md-textarea {
     -webkit-box-sizing: content-box;
@@ -7482,6 +7473,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="number"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="search"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="phone"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="search-md"]:focus:not([readonly]),
 .md-form textarea.md-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #4285f4;
@@ -7501,6 +7493,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="number"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="search"]:not(.browser-default):focus:not([readonly])+label,
+.md-form input[type="phone"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="search-md"]:focus:not([readonly])+label,
 .md-form textarea.md-textarea:focus:not([readonly])+label {
     color: #4285f4
@@ -7518,6 +7511,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default)+label::after,
 .md-form input[type="number"]:not(.browser-default)+label::after,
 .md-form input[type="search"]:not(.browser-default)+label::after,
+.md-form input[type="phone"]:not(.browser-default)+label::after,
 .md-form input[type="search-md"]+label::after,
 .md-form textarea.md-textarea+label::after {
     position: absolute;
@@ -7553,6 +7547,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.valid,
 .md-form input[type="search"]:not(.browser-default).valid,
 .md-form input[type="search"]:not(.browser-default):focus.valid,
+.md-form input[type="phone"]:not(.browser-default).valid,
+.md-form input[type="phone"]:not(.browser-default):focus.valid,
 .md-form input[type="search-md"].valid,
 .md-form input[type="search-md"]:focus.valid,
 .md-form textarea.md-textarea.valid,
@@ -7586,6 +7582,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).valid+label:after,
 .md-form input[type="search"]:not(.browser-default):focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).valid+label:after,
+.md-form input[type="phone"]:not(.browser-default):focus.valid+label:after,
 .md-form input[type="search-md"].valid+label:after,
 .md-form input[type="search-md"]:focus.valid+label:after,
 .md-form textarea.md-textarea.valid+label:after,
@@ -7619,6 +7617,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.invalid,
 .md-form input[type="search"]:not(.browser-default).invalid,
 .md-form input[type="search"]:not(.browser-default):focus.invalid,
+.md-form input[type="phone"]:not(.browser-default).invalid,
+.md-form input[type="phone"]:not(.browser-default):focus.invalid,
 .md-form input[type="search-md"].invalid,
 .md-form input[type="search-md"]:focus.invalid,
 .md-form textarea.md-textarea.invalid,
@@ -7652,6 +7652,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).invalid+label:after,
 .md-form input[type="search"]:not(.browser-default):focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default):focus.invalid+label:after,
 .md-form input[type="search-md"].invalid+label:after,
 .md-form input[type="search-md"]:focus.invalid+label:after,
 .md-form textarea.md-textarea.invalid+label:after,
@@ -7685,6 +7687,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control:focus.valid+label:after,
 .md-form input[type="search-md"].form-control.valid+label:after,
 .md-form input[type="search-md"].form-control:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control.valid+label:after,
@@ -7716,6 +7720,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control.invalid+label:after,
 .md-form input[type="search-md"].form-control:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control.invalid+label:after,
@@ -7747,6 +7753,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-lg:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg:focus.valid+label:after,
 .md-form input[type="search-md"].form-control-lg.valid+label:after,
 .md-form input[type="search-md"].form-control-lg:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control-lg.valid+label:after,
@@ -7778,6 +7786,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control-lg.invalid+label:after,
 .md-form input[type="search-md"].form-control-lg:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control-lg.invalid+label:after,
@@ -7809,6 +7819,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-sm:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm:focus.valid+label:after,
 .md-form input[type="search-md"].form-control-sm.valid+label:after,
 .md-form input[type="search-md"].form-control-sm:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control-sm.valid+label:after,
@@ -7840,6 +7852,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control-sm.invalid+label:after,
 .md-form input[type="search-md"].form-control-sm:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control-sm.invalid+label:after,
@@ -7847,9 +7861,11 @@ body.scrollable {
     top: 3.6rem
 }
 
+.md-form>input[type="date"]:not(.browser-default) {
+    color: transparent
+}
+
 .md-form>input[type="date"]:not(.browser-default)+label {
-    -webkit-transform: translateY(-27px) scale(0.8);
-    transform: translateY(-27px) scale(0.8);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0
 }
@@ -8059,13 +8075,21 @@ body.scrollable {
 }
 
 .md-form textarea.md-textarea {
-    padding: 1.5rem 0;
+    padding: 0;
     overflow-y: hidden
+}
+
+.md-form textarea.md-textarea+label {
+    top: -0.6rem
 }
 
 .md-form textarea.md-textarea-auto {
     padding: 0;
     padding-top: 1.5rem
+}
+
+.md-form textarea.md-textarea-auto+label {
+    top: 0
 }
 
 .md-form.md-outline {
@@ -8564,9 +8588,11 @@ body.scrollable {
     outline: none
 }
 
+.md-form.md-bg>input[type="date"]:not(.browser-default) {
+    color: transparent
+}
+
 .md-form.md-bg>input[type="date"]:not(.browser-default)+label {
-    -webkit-transform: translateY(-12px) scale(0.8);
-    transform: translateY(-12px) scale(0.8);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0
 }
@@ -8664,7 +8690,72 @@ body.scrollable {
 }
 
 .custom-file-input:lang(ru)~.custom-file-label::after {
-    content: "выбирать"
+    content: "Выбрать"
+}
+
+.md-form>label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.md-form .form-control {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important
+}
+
+.md-form .input-prefix {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    color: rgba(0, 0, 0, 0.87);
+    pointer-events: none
+}
+
+.md-form .input-prefix.active {
+    color: #4285f4
+}
+
+.md-form.input-with-pre-icon label {
+    left: 36px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .input-prefix {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .form-control {
+    padding-left: 2.7rem !important
+}
+
+.md-form.input-with-post-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon .form-control {
+    padding-right: 2.7rem !important
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix:first-of-type {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .form-control {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important
 }
 
 .edge-header {
@@ -9497,7 +9588,7 @@ ul.stepper li.completed a .label {
     z-index: 998;
     margin-bottom: 0;
     overflow: hidden;
-    height: 500px;
+    height: 110px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9507,7 +9598,9 @@ ul.stepper li.completed a .label {
     padding: 15px 15px 15px 15px;
     padding-bottom: 15px;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
+    -webkit-transition: height 400ms;
+    transition: height 400ms
 }
 
 .fixed-action-btn ul {
@@ -9560,6 +9653,10 @@ ul.stepper li.completed a .label {
     height: 300px;
     margin-bottom: 40px;
     opacity: 1
+}
+
+.fixed-action-btn.active {
+    height: 500px
 }
 
 button,
@@ -12005,6 +12102,15 @@ table.table a.btn.btn-whatsapp {
     animation-timing-function: ease
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+    .dropdown .dropdown-animating {
+        -webkit-animation: unset !important;
+        animation: unset !important;
+        -webkit-transition: none !important;
+        transition: none !important
+    }
+}
+
 .navbar .nav-item.avatar {
     padding: 0
 }
@@ -12450,8 +12556,8 @@ table.table a.btn.btn-whatsapp {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 }
 
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
+.form-check-input:not(:checked),
+.form-check-input:checked {
     position: absolute;
     pointer-events: none;
     opacity: 0
@@ -12854,20 +12960,12 @@ label.btn input[type="checkbox"]:disabled:checked+label:after {
     color: #007bff
 }
 
-.select-wrapper input::-moz-selection {
-    background: transparent
-}
-
-.select-wrapper input::selection {
-    background: transparent
-}
-
 .select-wrapper input.select-dropdown {
     position: relative;
     z-index: 2;
     display: block;
     width: 100%;
-    height: 38px;
+    height: 40px;
     padding: 0;
     margin: 0 0 .94rem 0;
     font-size: 1rem;
@@ -12976,7 +13074,7 @@ label.btn input[type="checkbox"]:disabled:checked+label:after {
 
 .select-wrapper>label.mdb-main-label {
     position: absolute;
-    top: 0.5rem;
+    top: 0;
     left: 0;
     font-weight: 300;
     color: #757575;
@@ -13122,7 +13220,11 @@ select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
-select.mdb-select {
+select.mdb-select.initialized {
+    display: none !important
+}
+
+select.mdb-select.initialized~.btn {
     display: none !important
 }
 
@@ -13582,8 +13684,7 @@ select:disabled {
     top: 10px;
     width: 0;
     height: 0;
-    margin-left: -6px;
-    background-color: #4285f4;
+    background-color: #1266f1;
     border: none;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
@@ -13596,7 +13697,7 @@ select:disabled {
     display: block;
     width: 30px;
     font-size: 0;
-    color: #4285f4;
+    color: #1266f1;
     text-align: center;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -13623,7 +13724,7 @@ select:disabled {
     width: 14px;
     height: 14px;
     margin: -5px 0 0 0;
-    background-color: #4285f4;
+    background-color: #1266f1;
     border: none;
     border-radius: 50%;
     -webkit-transition: .3s;
@@ -13648,7 +13749,7 @@ select:disabled {
     width: 14px;
     height: 14px;
     margin-top: -5px;
-    background: #4285f4;
+    background: #1266f1;
     border: none;
     border-radius: 50%
 }
@@ -13681,7 +13782,7 @@ select:disabled {
 .range-field input[type="range"]::-ms-thumb {
     width: 14px;
     height: 14px;
-    background: #4285f4;
+    background: #1266f1;
     border: none;
     border-radius: 50%
 }
@@ -13721,6 +13822,17 @@ select:disabled {
     -webkit-appearance: none
 }
 
+.mdb-autocomplete~label {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.mdb-autocomplete:focus~label {
+    color: #007bff
+}
+
 button:focus {
     outline: 0 !important
 }
@@ -13745,7 +13857,6 @@ button.mdb-autocomplete-clear svg {
     right: 0;
     left: 0;
     z-index: 100;
-    max-height: 210px;
     padding-left: 0;
     overflow-y: auto;
     list-style-type: none;
@@ -13861,8 +13972,8 @@ button.mdb-autocomplete-clear svg {
     width: 15rem;
     -webkit-transition-timing-function: linear, linear, ease;
     transition-timing-function: linear, linear, ease;
-    -webkit-transition-duration: .2s, .2s, .35s;
-    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
     -webkit-transition-property: top, bottom, width;
     transition-property: top, bottom, width
 }
@@ -13870,7 +13981,8 @@ button.mdb-autocomplete-clear svg {
 .side-nav.wide .logo-wrapper.sn-ad-avatar-wrapper {
     height: 5rem;
     padding: 19px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.65)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+    overflow: hidden
 }
 
 .side-nav.wide .logo-wrapper.sn-ad-avatar-wrapper a {
@@ -13929,8 +14041,8 @@ button.mdb-autocomplete-clear svg {
     width: 3.75rem !important;
     -webkit-transition-timing-function: linear, linear, ease;
     transition-timing-function: linear, linear, ease;
-    -webkit-transition-duration: .2s, .2s, .35s;
-    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
     -webkit-transition-property: top, bottom, width;
     transition-property: top, bottom, width
 }
@@ -15420,7 +15532,8 @@ button.md-toast-close-button {
     -ms-touch-action: auto;
     touch-action: auto;
     overflow-anchor: none;
-    -ms-overflow-style: none
+    -ms-overflow-style: none;
+    position: relative
 }
 
 .ps__rail-x {
@@ -15516,7 +15629,7 @@ button.md-toast-close-button {
 }
 
 .ps__rail-y {
-    top: 0 !important
+    top: 0
 }
 
 .test-skin .gradient {
@@ -22574,3 +22687,6 @@ ul.stepper li.completed a .grey-skin .circle {
 .contact-section .contact .far {
     color: #6b89a5
 }
+
+
+/*# sourceMappingURL=mdb.lite.min.css.map*/

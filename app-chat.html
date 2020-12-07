@@ -1,0 +1,866 @@
+<!--A Design by Med Coder
+Author: Ahmed Samir
+Template Name: MedCare | Personal Care System Template
+Author URL: https://www.facebook.com/a7med.samir.93
+License URL: https://github.com/a7medsamirf/MedCare/blob/master/LICENSE
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MedCare System</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="assets/css/mdb.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="assets/css/addons/datatables.min.css" />
+    <!-- aos animate -->
+    <link href="assets/css/modules/aos.css" rel="stylesheet">
+    <!-- custom styles (optional) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="white-skin" id="app-appointment">
+
+    <!-- ======== Start Header-theme ======== -->
+
+    <div class="fixed-menu right-sidebar">
+        <span class="show">
+            <i class="fal fa-cog fa-spin"></i>
+        </span>
+        <div class="setting-panel-header">Setting Panel
+        </div>
+
+
+        <div class="header-theme mx-3">
+            <h5 class="m-t-0 font-weight-bold">General Settings</h5>
+            <ul class="setting-list list-unstyled">
+                <li>
+                    <!-- Default unchecked 1 -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox1">
+                        <label class="custom-control-label" for="checkbox1">Report Panel Usage</label>
+                    </div>
+
+                </li>
+                <li>
+                    <!-- Default unchecked 2 -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox2">
+                        <label class="custom-control-label" for="checkbox2">Email Redirect</label>
+                    </div>
+
+                </li>
+                <li>
+                    <!-- Default unchecked 3 -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox3" checked>
+                        <label class="custom-control-label" for="checkbox3">Notifications</label>
+                    </div>
+
+                </li>
+                <li>
+                    <!-- Default unchecked 4-->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox4" checked>
+                        <label class="custom-control-label" for="checkbox4">Auto Updates</label>
+                    </div>
+
+
+                </li>
+            </ul>
+            <h5 class="m-t-0 font-weight-bold">Account Settings</h5>
+            <ul class="setting-list list-unstyled">
+                <li>
+                    <!-- Default unchecked 5-->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox5">
+                        <label class="custom-control-label" for="checkbox5">Offline</label>
+                    </div>
+                </li>
+                <li>
+
+                    <!-- Default unchecked 6-->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox6" checked>
+                        <label class="custom-control-label" for="checkbox6">Location Permission</label>
+                    </div>
+
+                </li>
+            </ul>
+            <h5 class="m-t-0 font-weight-bold">Skins</h5>
+
+            <ul class="switch-colors">
+                <div class="row">
+                    <div class="col-md-12">
+                        <li data-color="#303f9f" data-background="#45cafc"></li>
+                        <li data-color="#ff5860" data-background="#ff55a5"></li>
+                        <li data-color="#bd0c52" data-background="#f77062"></li>
+                        <li data-color="#fc6262" data-background="#ffd86f"></li>
+                        <li data-color="#5e38c7" data-background="#a180ff"></li>
+                        <li data-color="#0992ad" data-background="#20c6e6"></li>
+                        <li data-color="#079992" data-background="#02d4ca"></li>
+                        <li data-color="#13547a" data-background="#80d0c7"></li>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="m-t-0 font-weight-bold">Sidebar Background</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="#" data-theme="light-theme" class="theme light-theme selected"></a>
+                        <a href="#" data-theme="dark-theme" class="theme dark-theme"></a>
+                        <a href="#" data-theme="chiller-theme" class="theme chiller-theme"></a>
+                        <a href="#" data-theme="legacy-theme" class="theme legacy-theme"></a>
+                        <a href="#" data-theme="ice-theme" class="theme ice-theme"></a>
+                        <a href="#" data-theme="cool-theme" class="theme cool-theme"></a>
+                    </div>
+                    <div class="col-md-12">
+                        <h5 class="m-t-0 font-weight-bold">Sidebar Image</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="#" data-bg="bg1" class="theme theme-bg selected"></a>
+                        <a href="#" data-bg="bg2" class="theme theme-bg"></a>
+                        <a href="#" data-bg="bg3" class="theme theme-bg"></a>
+                        <a href="#" data-bg="bg4" class="theme theme-bg"></a>
+                        <a href="#" data-bg="bg5" class="theme theme-bg"></a>
+
+                    </div>
+                    <div class="col-md-12">
+                        <!-- Material switch -->
+                        <div class="switch">
+                            <div class="col-md-12">
+                                <h5 class="m-t-0 font-weight-bold">Sidebar Image</h5>
+                            </div>
+                            <label id="toggle-bg"> Off <input type="checkbox"> <span class="lever"></span>
+                                On </label>
+                        </div>
+                        <div class="button">
+                            <!-- Group of material radios - option 1 -->
+                            <div class="form-check" style="padding: 0;">
+                                <input type="radio" class="form-check-input" id="white-theme"
+                                    name="groupOfMaterialRadios" checked>
+                                <label class="form-check-label" for="white-theme">White theme</label>
+                            </div>
+
+                            <!-- Group of material radios - option 2 -->
+                            <div class="form-check" style="padding: 0;">
+                                <input type="radio" class="form-check-input" id="dark-theme"
+                                    name="groupOfMaterialRadios">
+                                <label class="form-check-label" for="dark-theme">Dark theme</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!-- ======== End Header theme ======== -->
+
+    <!-- page-wrapper -->
+    <div class="page-wrapper light-theme sidebar-bg bg1 toggled">
+
+        <div class="page-wrapper light-theme sidebar-bg bg1 toggled">
+            <nav id="sidebar" class="sidebar-wrapper">
+                <div class="sidebar-content">
+                    <!-- sidebar-brand  -->
+                    <!--    <div class="sidebar-item sidebar-brand">
+<h1 class="w">MedCare</h1>
+</div> -->
+                    <!-- sidebar-header  -->
+                    <div class="sidebar-item sidebar-header d-flex flex-nowrap">
+                        <div class="user-pic">
+                            <img class="img-responsive rounded-circle" src="assets/images/xs/avatar4.jpg"
+                                alt="User picture">
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">Welcome, </span>
+                            <a href="doctor-profile.html" class="user-name" data-toggle="dropdown"><strong>Dr. Deborah
+                                    Angel</strong></a>
+                            <span class="user-status">
+                                <i class="fa fa-circle"></i>
+                                <span>Online</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- sidebar-search  -->
+                    <div class="sidebar-item sidebar-search d-md-none">
+                        <div>
+                            <div class="input-group">
+                                <input type="text" class="form-control search-menu" placeholder="Search...">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar-menu  -->
+                    <div class="sidebar-item sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span class="menu-text">Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="app-appointment.html">
+                                    <i class="far fa-calendar-check"></i>
+                                    <span class="menu-text">Appointment </span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="app-chat.html">
+                                    <i class="far fa-comments"></i>
+                                    <span class="menu-text">Chat App</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Chandler.html">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span class="menu-text">Calendar</span>
+                                </a>
+                            </li>
+                            <li class="header-menu">
+                                <span>MEDICINE</span>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fas fa-user-md"></i>
+                                    <span class="menu-text">Doctors</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li><a href="all-doctors.html">All Doctor</a> </li>
+                                        <li><a href="add-doctor.html">Add Doctor</a> </li>
+                                        <li><a href="edit-doctor.html">Edit Doctor</a> </li>
+                                        <li><a href="doctor-profile.html">Doctor Profile</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fas fa-users"></i>
+                                    <span class="menu-text">Other Staff</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li><a href="all-staffs.html">All Staff</a> </li>
+                                        <li><a href="add-staff.html">Add Staff</a> </li>
+                                        <li><a href="edit-staff.html">Edit Staff</a> </li>
+                                        <li><a href="staff-doctor-profile.html">Staff Profile</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fas fa-user-injured"></i>
+                                    <span class="menu-text">Patients</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li><a href="all-patients.html">All Patients</a> </li>
+                                        <li><a href="add-patient.html">Add Patient</a> </li>
+                                        <li><a href="edit-patient.html">Edit Patient</a> </li>
+                                        <li><a href="patient-doctor-profile.html">Patient Profile</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fas fa-bed"></i>
+                                    <span class="menu-text">Room Allotment</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li><a href="room-allotment.html">Rooms Alloted </a> </li>
+                                        <li><a href="add-room.html">New Allotment</a> </li>
+                                        <li><a href="edit-room.html">Edit Allotment</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="far fa-money-bill-alt"></i>
+                                    <span class="menu-text">Payments</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li><a href="payments.html">Payments </a> </li>
+                                        <li><a href="add-payment.html">Add Payments</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- sidebar-menu  -->
+                </div>
+                <!-- sidebar-footer  -->
+                <div class="sidebar-footer">
+                    <div class="dropdown">
+
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell"></i>
+                            <span class="badge badge-pill badge-warning notification">3</span>
+                        </a>
+                        <div class="dropdown-menu notifications" aria-labelledby="dropdownMenuMessage">
+                            <div class="notifications-header">
+                                <i class="fa fa-bell"></i>
+                                Notifications
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="fas fa-check text-success border border-success"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing
+                                            elit. In totam explicabo</div>
+                                        <div class="notification-time">
+                                            6 minutes ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation text-info border border-info"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing
+                                            elit. In totam explicabo</div>
+                                        <div class="notification-time">
+                                            Today
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation-triangle text-warning border border-warning"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing
+                                            elit. In totam explicabo</div>
+                                        <div class="notification-time">
+                                            Yesterday
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-center" href="#">View all notifications</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-envelope"></i>
+                            <span class="badge badge-pill badge-success notification">7</span>
+                        </a>
+                        <div class="dropdown-menu messages" aria-labelledby="dropdownMenuMessage">
+                            <div class="messages-header">
+                                <i class="fa fa-envelope"></i>
+                                Messages
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="assets/img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong> Jhon doe</strong>
+                                        </div>
+                                        <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. In totam explicabo</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="assets/img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong> Jhon doe</strong>
+                                        </div>
+                                        <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. In totam explicabo</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="assets/img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong> Jhon doe</strong>
+                                        </div>
+                                        <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. In totam explicabo</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-center" href="#">View all messages</a>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="Login.html">
+                            <i class="fa fa-power-off"></i>
+                        </a>
+                    </div>
+                    <div class="pinned-footer">
+                        <a href="#">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- page-content  -->
+            <main class="page-content">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+                    <!-- SideNav slide-out button -->
+
+                    <div class="iq-menu-bt " id="toggle-sidebar" data-activates="sidebar">
+
+                        <svg class="ham ham6" viewBox="0 0 100 100" width="50"
+                            onclick="this.classList.toggle('active')">
+                            <path class="line top"
+                                d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+                            <path class="line middle"
+                                d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+                            <path class="line bottom"
+                                d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+                        </svg>
+
+                    </div>
+                    <div class="wrapper-menu" id="toggle-sidebar" data-activates="sidebar">
+                        <div class="line-menu half start"></div>
+                        <div class="line-menu"></div>
+                        <div class="line-menu half end"></div>
+                    </div>
+
+                    <!-- Breadcrumb-->
+
+                    <div class="search-field d-none d-md-block ml-5">
+                        <form class="d-flex align-items-center" action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-transparent border-0"
+                                    placeholder="Search here...">
+                                <div class="input-group-prepend bg-transparent">
+                                    <i class="far fa-search fa-lg"></i>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i data-toggle="fullscreen" class="far fa-compress"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fas fa-comments"></i>
+                                <span class="notify"></span>
+                                <span class="heartbeat"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ">
+                                <i class="fas fa-bell"></i>
+                                <span class="notify"></span>
+                                <span class="heartbeat"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated fadeInRight"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="doctor-profile.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.html">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- /.Navbar -->
+
+
+
+
+                <div id="overlay" class="overlay"></div>
+                <div class="container-fluid p-3">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                        <h1 class="h3 mb-0 text-gray-800 breadcrumb-icone"><i class="far fa-calendar-check mr-2"></i>
+                            App Chat</h1>
+                        <nav aria-label="breadcrumb d-none d-sm-inline-block">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"> App Chat</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <section class="app-chat">
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="inbox_msg">
+
+                                <div class="card inbox_people mb-3">
+                                    <!-- Card Header - Dropdown -->
+                                    <div
+                                        class="card-header white d-flex justify-content-between align-items-center py-3">
+                                        <p class="h5-responsive font-weight-bold mb-0"><i
+                                                class="far fa-calendar-check mr-2 pr-2"></i>App Chat</p>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="inbox_chat">
+                                            <table id="dt-select"
+                                                class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card card-messages">
+
+                                    <div class="card-header white d-flex justify-content-between">
+                                        <p class="h5-responsive font-weight-bold mb-0">Message Inbox - Johnathan Doe</p>
+                                        <ul class="list-unstyled d-flex align-items-center mb-0">
+                                            <li><span class="badge badge-pill badge-primary">3</span></li>
+                                            <li><i class="far fa-window-minimize fa-sm pl-3"></i></li>
+                                            <li><i class="fas fa-comments fa-sm pl-3"></i></li>
+                                            <li><i class="fas fa-times fa-sm pl-3"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body chat-custom-scrollbar">
+                        
+                                        <div class="media mt-3">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1 float-right">
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 4:04:12 PM
+                                                    </span>
+                                                    Jane Doe
+                                                </p>
+                                                <br>
+                                                <p class="mb-0 small primary-color text-white p-2 rounded chat-msg chat-msg-sent">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                                                </p>
+                                            </div>
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex ml-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg">
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1">
+                                                    Dubravko Kišić
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 12:06:26 PM
+                                                    </span>
+                                                </p>
+                                                <p class="mb-0 small grey lighten-2 p-2 rounded chat-msg chat-msg-incoming">
+                                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                                </p>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1 float-right">
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:11:54 PM
+                                                    </span>
+                                                    Jane Doe
+                                                </p>
+                                                <br>
+                                                <p class="mb-0 small primary-color text-white p-2 rounded chat-msg chat-msg-sent">
+                                                    Nice text
+                                                </p>
+                                            </div>
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex ml-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg">
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1">
+                                                    Dubravko Kišić
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:13:18 PM
+                                                    </span>
+                                                </p>
+                                                <p class="mb-0 small grey lighten-2 p-2 rounded chat-msg chat-msg-incoming">
+                                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                                                </p>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1 float-right">
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:13:31 PM
+                                                    </span>
+                                                    Jane Doe
+                                                </p>
+                                                <br>
+                                                <p class="mb-0 small primary-color text-white p-2 rounded chat-msg chat-msg-sent">
+                                                    New message
+                                                </p>
+                                            </div>
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex ml-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg">
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="assets/images/chat-dr.jpg">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1">
+                                                    Dubravko Kišić
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:18:57 PM
+                                                    </span>
+                                                </p>
+                                                <p class="mb-0 small grey lighten-2 p-2 rounded chat-msg chat-msg-incoming">
+                                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                                                </p>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="assets/images/chat-dr.jpg">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1">
+                                                    Dubravko Kišić
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:19:52 PM
+                                                    </span>
+                                                </p>
+                                                <p class="mb-0 small grey lighten-2 p-2 rounded chat-msg chat-msg-incoming">
+                                                    One very important part of jQuery is the possibility to manipulate the DOM.
+                        
+                                                    jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+                        
+                                                </p>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="media mt-3">
+                                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="assets/images/chat-dr.jpg">
+                                            <div class="media-body">
+                                                <p class="mt-0 font-weight-bold small mb-1">
+                                                    Dubravko Kišić
+                                                    <span class="text-muted small mt-3p">
+                                                        12/10/2019 1:20:51 PM
+                                                    </span>
+                                                </p>
+                                                <p class="mb-0 small grey lighten-2 p-2 rounded chat-msg chat-msg-incoming">
+                                                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested
+                        
+                                                </p>
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+                                    <div class="card-footer white py-3">
+                                        <form id="chatMessageCreateForm" class="form-group mb-0">
+                                            <textarea class="form-control rounded-0" rows="1" placeholder="Type message..."></textarea>
+                                            <div class="text-right pt-2">
+                                                <button class="btn btn-primary btn-sm mb-0 mr-0" type="submit">Send</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+
+                </div>
+
+            </main>
+            <!-- page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+
+        <!-- full screen JavaScript -->
+        <script type="text/javascript" src="assets/js/jquery.full.screen.min.js"></script>
+        <!-- datatables JavaScript -->
+        <script type="text/javascript" src="assets/js/addons/datatables.min.js"></script>
+        <!--  aos animate JavaScript -->
+        <script type="text/javascript" src="assets/js/modules/aos.js"></script>
+        <!-- Custom JavaScript -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+var ps = new PerfectScrollbar(".chat-custom-scrollbar");
+
+var dataSet = [
+    ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011-04-25", "$320,800"],
+    ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011-07-25", "$170,750"],
+    ["Ashton Third Cox", "Junior Technical Author", "San Francisco", "1562", "2009-01-12", "$86,000"],
+    ["Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012-03-29", "$433,060"],
+    ["Airi", "Accountant", "Tokyo", "5407", "2008-11-28", "$162,700"],
+    ["Brielle Williamson Need More Space To Check It", "Integration Specialist", "New York", "4804", "2012-12-02",
+        "$372,000"
+    ],
+    ["Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012-08-06", "$137,500"],
+    ["Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010-10-14", "$327,900"],
+    ["Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009-09-15", "$205,500"],
+    ["Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008-12-13", "$103,600"],
+    ["Jena Gaines", "Office Manager", "London", "3814", "2008-12-19", "$90,560"],
+    ["Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013-03-03", "$342,000"],
+    ["Charde Marshall", "Regional Director", "San Francisco", "6741", "2008-10-16", "$470,600"],
+    ["Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012-12-18", "$313,500"],
+    ["Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010-03-17", "$385,750"],
+    ["Michael Silva", "Marketing Designer", "London", "1581", "2012-11-27", "$198,500"],
+    ["Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010-06-09", "$725,000"],
+    ["Gloria Little", "Systems Administrator", "New York", "1721", "2009-04-10", "$237,500"],
+    ["Bradley Fourth Fourth Greer", "Software Engineer", "London", "2558", "2012-10-13", "$132,000"],
+    ["Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012-09-26", "$217,500"],
+    ["Jenette Caldwell", "Development Lead", "New York", "1937", "2011-09-03", "$345,000"],
+    ["Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009-06-25", "$675,000"],
+    ["Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011-12-12", "$106,450"],
+    ["Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010-09-20", "$85,600"],
+    ["Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009-10-09", "$1,200,000"],
+    ["Gavin Joyce", "Developer", "Edinburgh", "8822", "2010-12-22", "$92,575"],
+    ["Jennifer Chang", "Regional Director", "Singapore", "9239", "2010-11-14", "$357,650"],
+    ["Brenden Fifth Example Some Wagner", "Software Engineer", "San Francisco", "1314", "2011-06-07", "$206,850"],
+    ["Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010-03-11", "$850,000"],
+    ["Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011-08-14", "$163,000"],
+    ["Michelle House", "Integration Specialist", "Sidney", "2769", "2011-06-02", "$95,400"],
+    ["Suki Burks", "Developer", "London", "6832", "2009-10-22", "$114,500"],
+    ["Prescott Bartlett", "Technical Author", "London", "3606", "2011-05-07", "$145,000"],
+    ["Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008-10-26", "$235,500"],
+    ["Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011-03-09", "$324,050"],
+    ["Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009-12-09", "$85,675"]
+];
+
+$(document).ready(function () {
+
+    var table = $('#dt-select').DataTable({
+        data: dataSet,
+        scrollY: "520px",
+        scrollX: false,
+        scrollCollapse: true,
+        autoWidth: false,
+        columns: [{
+            render: function (data, type, row) {
+                return `<div class="media">
+                            <img class="avatar rounded-circle card-img-35 z-depth-1 d-flex mr-3" src="assets/images/chat-dr.jpg">
+                            <div class="media-body">
+                                <p class="mt-2 font-weight-bold mb-1">${data}</p>
+                            </div>
+                        </div>`;
+            }
+        }],
+        fnInitComplete: function () {
+            const psDatatable = new PerfectScrollbar(".dataTables_scrollBody");
+        }
+    });
+   
+});
+
+
+});
+</script>
+
+
+
+</body>
+
+</html>

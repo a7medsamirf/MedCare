@@ -2,7 +2,7 @@
 
 /*!
  * Material Design for Bootstrap 4
- *   Version: MDB PRO 4.11.0
+ *   Version: MDB PRO 4.19.1
  * 
  * 
  *   Copyright: Material Design for Bootstrap
@@ -1507,10 +1507,13 @@
 .dropright .dropdown-menu .dropdown-item:active,
 .side-nav,
 .side-nav .search-form .form-control,
+.side-nav2,
+.side-nav2 .search-form .form-control,
 .md-toast-message a,
 .md-toast-message label,
 .md-toast-close-button,
 #toast-container>div,
+.clockpicker_container.clockpicker .picker__box .clockpicker-am-pm-block .active,
 .picker__list-item--selected,
 .picker__list-item--selected:hover,
 .picker--focused .picker__list-item--selected,
@@ -2048,41 +2051,6 @@ button.bg-light:focus {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 200;
-    src: local(Roboto Thin), url(../font/roboto/Roboto-Thin.eot);
-    src: url(../font/roboto/Roboto-Thin.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Thin.woff2) format("woff2"), url(../font/roboto/Roboto-Thin.woff) format("woff"), url(../font/roboto/Roboto-Thin.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 300;
-    src: local(Roboto Light), url(../font/roboto/Roboto-Light.eot);
-    src: url(../font/roboto/Roboto-Light.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Light.woff2) format("woff2"), url(../font/roboto/Roboto-Light.woff) format("woff"), url(../font/roboto/Roboto-Light.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 400;
-    src: local(Roboto Regular), url(../font/roboto/Roboto-Regular.eot);
-    src: url(../font/roboto/Roboto-Regular.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Regular.woff2) format("woff2"), url(../font/roboto/Roboto-Regular.woff) format("woff"), url(../font/roboto/Roboto-Regular.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 500;
-    src: url(../font/roboto/Roboto-Medium.eot);
-    src: url(../font/roboto/Roboto-Medium.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Medium.woff2) format("woff2"), url(../font/roboto/Roboto-Medium.woff) format("woff"), url(../font/roboto/Roboto-Medium.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: Roboto;
-    font-weight: 700;
-    src: url(../font/roboto/Roboto-Bold.eot);
-    src: url(../font/roboto/Roboto-Bold.eot?#iefix) format("embedded-opentype"), url(../font/roboto/Roboto-Bold.woff2) format("woff2"), url(../font/roboto/Roboto-Bold.woff) format("woff"), url(../font/roboto/Roboto-Bold.ttf) format("truetype")
 }
 
 body {
@@ -3581,8 +3549,8 @@ a.waves-light {
     }
 
     77.7% {
-        -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-        transform: skewX(0.39063deg) skewY(0.39063deg)
+        -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+        transform: skewX(0.39062deg) skewY(0.39062deg)
     }
 
     88.8% {
@@ -3626,8 +3594,8 @@ a.waves-light {
     }
 
     77.7% {
-        -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-        transform: skewX(0.39063deg) skewY(0.39063deg)
+        -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+        transform: skewX(0.39062deg) skewY(0.39062deg)
     }
 
     88.8% {
@@ -9688,6 +9656,7 @@ table.table a.btn.btn-black {
     background: linear-gradient(#5ed1fc, #3647b3)
 }
 
+.btn-warning:focus,
 .btn-warning:not(:disabled):not(.disabled).active,
 .btn-warning:not(:disabled):not(.disabled):active,
 .show>.btn-warning.dropdown-toggle {
@@ -9738,6 +9707,22 @@ table.table a.btn.btn-black {
 
 .dropdown .dropdown-menu .dropdown-item:active {
     background-color: #757575
+}
+
+.dropdown-submenu {
+    position: relative
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 1px;
+    border-radius: 0 6px 6px 6px
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block
 }
 
 .md-form.input-group label {
@@ -10220,6 +10205,14 @@ table.table a.btn.btn-black {
 body.modal-open {
     padding-right: 0 !important;
     overflow: auto
+}
+
+body.modal-open .fixed-top {
+    padding-right: 1rem !important
+}
+
+body.modal-open .fixed-bottom {
+    padding-right: 0 !important
 }
 
 body.scrollable {
@@ -10733,6 +10726,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default),
 .md-form input[type="number"]:not(.browser-default),
 .md-form input[type="search"]:not(.browser-default),
+.md-form input[type="phone"]:not(.browser-default),
 .md-form input[type="search-md"],
 .md-form textarea.md-textarea {
     -webkit-box-sizing: content-box;
@@ -10762,6 +10756,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="number"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="search"]:not(.browser-default):focus:not([readonly]),
+.md-form input[type="phone"]:not(.browser-default):focus:not([readonly]),
 .md-form input[type="search-md"]:focus:not([readonly]),
 .md-form textarea.md-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #4285f4;
@@ -10781,6 +10776,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="number"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="search"]:not(.browser-default):focus:not([readonly])+label,
+.md-form input[type="phone"]:not(.browser-default):focus:not([readonly])+label,
 .md-form input[type="search-md"]:focus:not([readonly])+label,
 .md-form textarea.md-textarea:focus:not([readonly])+label {
     color: #4285f4
@@ -10798,6 +10794,7 @@ body.scrollable {
 .md-form input[type="tel"]:not(.browser-default)+label::after,
 .md-form input[type="number"]:not(.browser-default)+label::after,
 .md-form input[type="search"]:not(.browser-default)+label::after,
+.md-form input[type="phone"]:not(.browser-default)+label::after,
 .md-form input[type="search-md"]+label::after,
 .md-form textarea.md-textarea+label::after {
     position: absolute;
@@ -10833,6 +10830,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.valid,
 .md-form input[type="search"]:not(.browser-default).valid,
 .md-form input[type="search"]:not(.browser-default):focus.valid,
+.md-form input[type="phone"]:not(.browser-default).valid,
+.md-form input[type="phone"]:not(.browser-default):focus.valid,
 .md-form input[type="search-md"].valid,
 .md-form input[type="search-md"]:focus.valid,
 .md-form textarea.md-textarea.valid,
@@ -10866,6 +10865,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).valid+label:after,
 .md-form input[type="search"]:not(.browser-default):focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).valid+label:after,
+.md-form input[type="phone"]:not(.browser-default):focus.valid+label:after,
 .md-form input[type="search-md"].valid+label:after,
 .md-form input[type="search-md"]:focus.valid+label:after,
 .md-form textarea.md-textarea.valid+label:after,
@@ -10899,6 +10900,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.invalid,
 .md-form input[type="search"]:not(.browser-default).invalid,
 .md-form input[type="search"]:not(.browser-default):focus.invalid,
+.md-form input[type="phone"]:not(.browser-default).invalid,
+.md-form input[type="phone"]:not(.browser-default):focus.invalid,
 .md-form input[type="search-md"].invalid,
 .md-form input[type="search-md"]:focus.invalid,
 .md-form textarea.md-textarea.invalid,
@@ -10932,6 +10935,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default):focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).invalid+label:after,
 .md-form input[type="search"]:not(.browser-default):focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default):focus.invalid+label:after,
 .md-form input[type="search-md"].invalid+label:after,
 .md-form input[type="search-md"]:focus.invalid+label:after,
 .md-form textarea.md-textarea.invalid+label:after,
@@ -10965,6 +10970,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control:focus.valid+label:after,
 .md-form input[type="search-md"].form-control.valid+label:after,
 .md-form input[type="search-md"].form-control:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control.valid+label:after,
@@ -10996,6 +11003,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control.invalid+label:after,
 .md-form input[type="search-md"].form-control:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control.invalid+label:after,
@@ -11027,6 +11036,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-lg:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg:focus.valid+label:after,
 .md-form input[type="search-md"].form-control-lg.valid+label:after,
 .md-form input[type="search-md"].form-control-lg:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control-lg.valid+label:after,
@@ -11058,6 +11069,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-lg:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control-lg.invalid+label:after,
 .md-form input[type="search-md"].form-control-lg:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control-lg.invalid+label:after,
@@ -11089,6 +11102,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-sm:focus.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm.valid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm:focus.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm.valid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm:focus.valid+label:after,
 .md-form input[type="search-md"].form-control-sm.valid+label:after,
 .md-form input[type="search-md"].form-control-sm:focus.valid+label:after,
 .md-form textarea.md-textarea.form-control-sm.valid+label:after,
@@ -11120,6 +11135,8 @@ body.scrollable {
 .md-form input[type="number"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm.invalid+label:after,
 .md-form input[type="search"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm.invalid+label:after,
+.md-form input[type="phone"]:not(.browser-default).form-control-sm:focus.invalid+label:after,
 .md-form input[type="search-md"].form-control-sm.invalid+label:after,
 .md-form input[type="search-md"].form-control-sm:focus.invalid+label:after,
 .md-form textarea.md-textarea.form-control-sm.invalid+label:after,
@@ -11127,9 +11144,11 @@ body.scrollable {
     top: 3.6rem
 }
 
+.md-form>input[type="date"]:not(.browser-default) {
+    color: transparent
+}
+
 .md-form>input[type="date"]:not(.browser-default)+label {
-    -webkit-transform: translateY(-27px) scale(0.8);
-    transform: translateY(-27px) scale(0.8);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0
 }
@@ -11339,13 +11358,21 @@ body.scrollable {
 }
 
 .md-form textarea.md-textarea {
-    padding: 1.5rem 0;
+    padding: 0;
     overflow-y: hidden
+}
+
+.md-form textarea.md-textarea+label {
+    top: -0.6rem
 }
 
 .md-form textarea.md-textarea-auto {
     padding: 0;
     padding-top: 1.5rem
+}
+
+.md-form textarea.md-textarea-auto+label {
+    top: 0
 }
 
 .md-form.md-outline {
@@ -11844,9 +11871,11 @@ body.scrollable {
     outline: none
 }
 
+.md-form.md-bg>input[type="date"]:not(.browser-default) {
+    color: transparent
+}
+
 .md-form.md-bg>input[type="date"]:not(.browser-default)+label {
-    -webkit-transform: translateY(-12px) scale(0.8);
-    transform: translateY(-12px) scale(0.8);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0
 }
@@ -11944,7 +11973,72 @@ body.scrollable {
 }
 
 .custom-file-input:lang(ru)~.custom-file-label::after {
-    content: "выбирать"
+    content: "Выбрать"
+}
+
+.md-form>label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.md-form .form-control {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important
+}
+
+.md-form .input-prefix {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    color: rgba(0, 0, 0, 0.87);
+    pointer-events: none
+}
+
+.md-form .input-prefix.active {
+    color: #4285f4
+}
+
+.md-form.input-with-pre-icon label {
+    left: 36px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .input-prefix {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .form-control {
+    padding-left: 2.7rem !important
+}
+
+.md-form.input-with-post-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon .form-control {
+    padding-right: 2.7rem !important
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix:first-of-type {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .form-control {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important
 }
 
 .edge-header {
@@ -12777,7 +12871,7 @@ ul.stepper li.completed a .label {
     z-index: 998;
     margin-bottom: 0;
     overflow: hidden;
-    height: 500px;
+    height: 110px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12787,7 +12881,9 @@ ul.stepper li.completed a .label {
     padding: 15px 15px 15px 15px;
     padding-bottom: 15px;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
+    -webkit-transition: height 400ms;
+    transition: height 400ms
 }
 
 .fixed-action-btn ul {
@@ -12840,6 +12936,10 @@ ul.stepper li.completed a .label {
     height: 300px;
     margin-bottom: 40px;
     opacity: 1
+}
+
+.fixed-action-btn.active {
+    height: 500px
 }
 
 button,
@@ -15285,6 +15385,15 @@ table.table a.btn.btn-whatsapp {
     animation-timing-function: ease
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+    .dropdown .dropdown-animating {
+        -webkit-animation: unset !important;
+        animation: unset !important;
+        -webkit-transition: none !important;
+        transition: none !important
+    }
+}
+
 .navbar .nav-item.avatar {
     padding: 0
 }
@@ -16436,8 +16545,8 @@ table.table a.btn.btn-whatsapp {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 }
 
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
+.form-check-input:not(:checked),
+.form-check-input:checked {
     position: absolute;
     pointer-events: none;
     opacity: 0
@@ -16840,20 +16949,12 @@ label.btn input[type="checkbox"]:disabled:checked+label:after {
     color: #007bff
 }
 
-.select-wrapper input::-moz-selection {
-    background: transparent
-}
-
-.select-wrapper input::selection {
-    background: transparent
-}
-
 .select-wrapper input.select-dropdown {
     position: relative;
     z-index: 2;
     display: block;
     width: 100%;
-    height: 38px;
+    height: 40px;
     padding: 0;
     margin: 0 0 .94rem 0;
     font-size: 1rem;
@@ -16962,7 +17063,7 @@ label.btn input[type="checkbox"]:disabled:checked+label:after {
 
 .select-wrapper>label.mdb-main-label {
     position: absolute;
-    top: 0.5rem;
+    top: 0;
     left: 0;
     font-weight: 300;
     color: #757575;
@@ -17108,7 +17209,11 @@ select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
-select.mdb-select {
+select.mdb-select.initialized {
+    display: none !important
+}
+
+select.mdb-select.initialized~.btn {
     display: none !important
 }
 
@@ -17568,8 +17673,7 @@ select:disabled {
     top: 10px;
     width: 0;
     height: 0;
-    margin-left: -6px;
-    background-color: #4285f4;
+    background-color: #1266f1;
     border: none;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
@@ -17582,7 +17686,7 @@ select:disabled {
     display: block;
     width: 30px;
     font-size: 0;
-    color: #4285f4;
+    color: #1266f1;
     text-align: center;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -17609,7 +17713,7 @@ select:disabled {
     width: 14px;
     height: 14px;
     margin: -5px 0 0 0;
-    background-color: #4285f4;
+    background-color: #1266f1;
     border: none;
     border-radius: 50%;
     -webkit-transition: .3s;
@@ -17634,7 +17738,7 @@ select:disabled {
     width: 14px;
     height: 14px;
     margin-top: -5px;
-    background: #4285f4;
+    background: #1266f1;
     border: none;
     border-radius: 50%
 }
@@ -17667,7 +17771,7 @@ select:disabled {
 .range-field input[type="range"]::-ms-thumb {
     width: 14px;
     height: 14px;
-    background: #4285f4;
+    background: #1266f1;
     border: none;
     border-radius: 50%
 }
@@ -17707,6 +17811,17 @@ select:disabled {
     -webkit-appearance: none
 }
 
+.mdb-autocomplete~label {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.mdb-autocomplete:focus~label {
+    color: #007bff
+}
+
 button:focus {
     outline: 0 !important
 }
@@ -17731,7 +17846,6 @@ button.mdb-autocomplete-clear svg {
     right: 0;
     left: 0;
     z-index: 100;
-    max-height: 210px;
     padding-left: 0;
     overflow-y: auto;
     list-style-type: none;
@@ -17968,8 +18082,8 @@ button.mdb-autocomplete-clear svg {
     width: 15rem;
     -webkit-transition-timing-function: linear, linear, ease;
     transition-timing-function: linear, linear, ease;
-    -webkit-transition-duration: .2s, .2s, .35s;
-    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
     -webkit-transition-property: top, bottom, width;
     transition-property: top, bottom, width
 }
@@ -17977,7 +18091,8 @@ button.mdb-autocomplete-clear svg {
 .side-nav.wide .logo-wrapper.sn-ad-avatar-wrapper {
     height: 5rem;
     padding: 19px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.65)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+    overflow: hidden
 }
 
 .side-nav.wide .logo-wrapper.sn-ad-avatar-wrapper a {
@@ -18036,8 +18151,8 @@ button.mdb-autocomplete-clear svg {
     width: 3.75rem !important;
     -webkit-transition-timing-function: linear, linear, ease;
     transition-timing-function: linear, linear, ease;
-    -webkit-transition-duration: .2s, .2s, .35s;
-    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
     -webkit-transition-property: top, bottom, width;
     transition-property: top, bottom, width
 }
@@ -18440,6 +18555,545 @@ button.mdb-autocomplete-clear svg {
 }
 
 .side-nav .search-form .form-control {
+    margin-bottom: 0
+}
+
+.drag-target {
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    width: 10px;
+    height: 100%
+}
+
+#sidenav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 997;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    will-change: opacity
+}
+
+.transform-fix-input {
+    -webkit-transform: translateX(0) !important;
+    transform: translateX(0) !important
+}
+
+.side-nav2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 15rem;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 3.75rem;
+    margin: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #2c2f34;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform
+}
+
+.side-nav2.wide {
+    width: 15rem;
+    -webkit-transition-timing-function: linear, linear, ease;
+    transition-timing-function: linear, linear, ease;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
+    -webkit-transition-property: top, bottom, width;
+    transition-property: top, bottom, width
+}
+
+.side-nav2.wide .logo-wrapper.sn-ad-avatar-wrapper {
+    height: 5rem;
+    padding: 19px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+    overflow: hidden
+}
+
+.side-nav2.wide .logo-wrapper.sn-ad-avatar-wrapper a {
+    line-height: 2.6rem;
+    color: #fff
+}
+
+.side-nav2.wide .logo-wrapper.sn-ad-avatar-wrapper a span {
+    padding-left: .7rem;
+    margin-top: -1rem
+}
+
+.side-nav2.wide .logo-wrapper.sn-ad-avatar-wrapper a img {
+    max-width: 2.5rem;
+    padding: 0
+}
+
+.side-nav2.wide .collapsible a {
+    padding-left: 23px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.side-nav2.wide .collapsible a .sv-normal {
+    opacity: 1;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.side-nav2.wide .collapsible a .sv-slim {
+    display: none;
+    opacity: 0;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.side-nav2.wide .collapsible a .link-text {
+    display: block;
+    position: absolute;
+    margin-left: 37px;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.side-nav2.wide .collapsible .sv-slim-icon {
+    width: 30px;
+    height: 36px;
+    padding-left: 0;
+    margin-right: 0;
+    text-align: left;
+    display: block;
+    position: absolute;
+    top: 10px
+}
+
+.side-nav2.wide .collapsible-body a {
+    padding-left: 47px
+}
+
+.side-nav2.wide .fa-angle-down.rotate-icon {
+    display: block;
+    opacity: 1
+}
+
+.side-nav2.wide.slim {
+    right: 3.75rem;
+    width: 3.75rem !important;
+    -webkit-transition-timing-function: linear, linear, ease;
+    transition-timing-function: linear, linear, ease;
+    -webkit-transition-duration: .5s, .5s, .55s;
+    transition-duration: .5s, .5s, .55s;
+    -webkit-transition-property: top, bottom, width;
+    transition-property: top, bottom, width
+}
+
+.side-nav2.wide.slim .collapsible a {
+    padding-left: 23px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.side-nav2.wide.slim .collapsible a .sv-normal {
+    opacity: 0;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.side-nav2.wide.slim .collapsible a .sv-slim {
+    display: block;
+    opacity: 1;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.side-nav2.wide.slim .collapsible .sv-slim-icon {
+    width: 30px;
+    height: 36px;
+    padding-left: 0;
+    margin-right: 0;
+    text-align: left
+}
+
+.side-nav2.wide.slim .fa-angle-down.rotate-icon {
+    display: none;
+    opacity: 0
+}
+
+.side-nav2>ul {
+    max-height: 100vh
+}
+
+.side-nav2 ul {
+    padding-left: 0;
+    list-style: none;
+    list-style-type: none
+}
+
+.side-nav2 ul li {
+    padding: 0
+}
+
+.side-nav2.right-aligned {
+    right: 0;
+    left: auto;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+.side-nav2.side-nav-light {
+    background-color: #e5e5e5
+}
+
+.side-nav2.side-nav-light .logo-wrapper {
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3)
+}
+
+.side-nav2.side-nav-light .logo-wrapper.sn-ad-avatar-wrapper {
+    color: #555
+}
+
+.side-nav2.side-nav-light .about {
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3)
+}
+
+.side-nav2.side-nav-light .about p {
+    color: #555
+}
+
+.side-nav2.side-nav-light .social {
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3)
+}
+
+.side-nav2.side-nav-light .social .fas,
+.side-nav2.side-nav-light .social .fab,
+.side-nav2.side-nav-light .social .far {
+    color: #555
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"] {
+    color: #555 !important;
+    border-bottom-color: rgba(153, 153, 153, 0.3)
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"]::-webkit-input-placeholder {
+    color: #555 !important
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"]::-moz-placeholder {
+    color: #555 !important
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"]:-ms-input-placeholder {
+    color: #555 !important
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"]::-ms-input-placeholder {
+    color: #555 !important
+}
+
+.side-nav2.side-nav-light .search-form input[type="text"]::placeholder {
+    color: #555 !important
+}
+
+.side-nav2.side-nav-light .collapsible a {
+    color: #555
+}
+
+.side-nav2.side-nav-light .collapsible-body a {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.side-nav2.side-nav-light .collapsible li .collapsible-header:hover {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.side-nav2.side-nav-light .collapsible li .collapsible-header.active {
+    color: #4285f4;
+    background-color: transparent
+}
+
+.side-nav2.fixed {
+    position: fixed;
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.side-nav2.fixed.right-aligned {
+    right: 0;
+    left: auto
+}
+
+@media only screen and (max-width: 1440px) {
+    .side-nav2.fixed {
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%)
+    }
+
+    .side-nav2.fixed.right-aligned {
+        -webkit-transform: translateX(105%);
+        transform: translateX(105%)
+    }
+}
+
+.side-nav2 .collapsible {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem
+}
+
+.side-nav2 .collapsible li a:hover {
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.side-nav2 .collapsible>li {
+    border-radius: 2px
+}
+
+.side-nav2 .collapsible>li a.collapsible-header:hover {
+    background-color: rgba(255, 255, 255, 0.15)
+}
+
+.side-nav2 .collapsible>li a.collapsible-header.active {
+    background-color: rgba(255, 255, 255, 0.15)
+}
+
+.side-nav2 .collapsible ul {
+    padding: 0;
+    list-style-type: none
+}
+
+.side-nav2 .collapsible a {
+    height: 36px;
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 36px;
+    color: #fff
+}
+
+.side-nav2 .collapsible a.active,
+.side-nav2 .collapsible a:hover {
+    border-radius: 2px
+}
+
+.side-nav2 .collapsible .fas,
+.side-nav2 .collapsible .fab,
+.side-nav2 .collapsible .far {
+    margin-right: 13px;
+    font-size: .8rem
+}
+
+.side-nav2 .collapsible-body a {
+    height: 36px;
+    padding-left: 47px;
+    line-height: 36px;
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.side-nav2 a {
+    display: block;
+    height: 56px;
+    padding-left: 20px;
+    font-size: 1rem;
+    line-height: 56px
+}
+
+.side-nav2 .fa-angle-down.rotate-icon {
+    position: absolute;
+    top: .8rem;
+    right: 0;
+    margin-right: 1.25rem
+}
+
+.side-nav2 .sidenav-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 15rem;
+    background-attachment: fixed
+}
+
+.side-nav2 .sidenav-bg:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+    content: ""
+}
+
+.side-nav2 .logo-wrapper {
+    height: 8.75rem;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3)
+}
+
+.side-nav2 .logo-wrapper a {
+    width: 15rem;
+    height: 8.75rem;
+    padding: 0
+}
+
+.side-nav2 .logo-wrapper img {
+    height: auto;
+    padding-top: 20%;
+    padding-right: 50px;
+    padding-bottom: 20%;
+    padding-left: 50px
+}
+
+@media (max-height: 992px) {
+    .side-nav2 .logo-wrapper {
+        height: 80px
+    }
+
+    .side-nav2 .logo-wrapper a {
+        height: 80px
+    }
+
+    .side-nav2 .logo-wrapper img {
+        padding-top: 7%;
+        padding-bottom: 7%
+    }
+}
+
+.side-nav2 .logo-wrapper.sn-avatar-wrapper {
+    padding-top: 10%;
+    padding-right: 33%;
+    padding-bottom: 10%;
+    padding-left: 33%
+}
+
+.side-nav2 .logo-wrapper.sn-avatar-wrapper img {
+    max-width: 90px;
+    padding: 0;
+    margin: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+@media only screen and (max-height: 992px) {
+    .side-nav2 .logo-wrapper.sn-avatar-wrapper {
+        padding-right: 40%;
+        padding-left: 40%
+    }
+
+    .side-nav2 .logo-wrapper.sn-avatar-wrapper img {
+        max-width: 50px
+    }
+}
+
+.side-nav2 .logo-wrapper.sn-ad-avatar-wrapper {
+    height: auto;
+    margin-bottom: 0
+}
+
+.side-nav2 .logo-wrapper.sn-ad-avatar-wrapper img {
+    float: left;
+    max-width: 3.75rem;
+    padding: 1.25rem 0.63rem
+}
+
+.side-nav2 .logo-wrapper.sn-ad-avatar-wrapper p {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    margin: 0;
+    font-size: .94rem
+}
+
+.side-nav2 .about {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65)
+}
+
+.side-nav2 .about p {
+    margin-bottom: 0;
+    text-align: center
+}
+
+.side-nav2 .social {
+    padding-top: 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65)
+}
+
+.side-nav2 .social li {
+    display: inline-block;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    margin: 0
+}
+
+.side-nav2 .social a {
+    padding: 0;
+    margin: 0
+}
+
+.side-nav2 .social .fas,
+.side-nav2 .social .fab,
+.side-nav2 .social .far {
+    padding-right: .6rem;
+    padding-left: .6rem;
+    font-size: .9rem;
+    color: #dbe4e7;
+    -webkit-transition: .3s;
+    transition: .3s
+}
+
+.side-nav2 .social .fas:hover,
+.side-nav2 .social .fab:hover,
+.side-nav2 .social .far:hover {
+    color: #afc4cb;
+    -webkit-transition: .3s;
+    transition: .3s
+}
+
+.side-nav2 .search-form {
+    padding: 0
+}
+
+.side-nav2 .search-form input[type="text"] {
+    padding-left: 1.88rem;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65)
+}
+
+.side-nav2 .search-form input[type="text"]::-webkit-input-placeholder {
+    color: #fff
+}
+
+.side-nav2 .search-form input[type="text"]::-moz-placeholder {
+    color: #fff
+}
+
+.side-nav2 .search-form input[type="text"]:-ms-input-placeholder {
+    color: #fff
+}
+
+.side-nav2 .search-form input[type="text"]::-ms-input-placeholder {
+    color: #fff
+}
+
+.side-nav2 .search-form input[type="text"]::placeholder {
+    color: #fff
+}
+
+.side-nav2 .search-form .form-control {
     margin-bottom: 0
 }
 
@@ -19527,7 +20181,8 @@ button.md-toast-close-button {
     -ms-touch-action: auto;
     touch-action: auto;
     overflow-anchor: none;
-    -ms-overflow-style: none
+    -ms-overflow-style: none;
+    position: relative
 }
 
 .ps__rail-x {
@@ -19623,7 +20278,7 @@ button.md-toast-close-button {
 }
 
 .ps__rail-y {
-    top: 0 !important
+    top: 0
 }
 
 .navbar .mega-dropdown {
@@ -26517,6 +27172,56 @@ ul.stepper li.completed a .grey-skin .circle {
     display: none
 }
 
+.clockpicker_container.clockpicker .picker__box .clockpicker-am-pm-block {
+    padding-left: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 1.125rem;
+    height: 100%
+}
+
+.clockpicker_container.clockpicker .picker__box .clockpicker-am-pm-block span {
+    cursor: pointer
+}
+
+.clockpicker_container.clockpicker .picker__box .picker__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.clockpicker_container.clockpicker .picker__box .picker__footer .clockpicker-button {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    min-width: 64px
+}
+
+.clockpicker_container.clockpicker .picker__box .picker__footer .clockpicker-button:focus {
+    outline: 5px auto #4285f4 !important
+}
+
+.clockpicker_container.clockpicker .picker__box .picker__footer .clockpicker-button.clear-button {
+    margin-right: auto
+}
+
+div.timepicker input~i.input-prefix {
+    cursor: pointer;
+    pointer-events: all
+}
+
 .picker__list {
     padding: 0.75em 0 4.2em;
     margin: 0;
@@ -26593,8 +27298,7 @@ ul.stepper li.completed a .grey-skin .circle {
     color: #000;
     cursor: pointer;
     background: #b1dcfb;
-    border-color: #e20;
-    outline: none
+    border-color: #e20
 }
 
 .picker--time .picker__button--clear::before {
@@ -26873,9 +27577,7 @@ ul.stepper li.completed a .grey-skin .circle {
 }
 
 .clockpicker-am-pm-block {
-    width: 100%;
-    height: 3.125rem;
-    margin-top: -.625rem
+    width: 100%
 }
 
 .clockpicker-am-pm-block .clockpicker-button.am-button {
@@ -26921,8 +27623,10 @@ ul.stepper li.completed a .grey-skin .circle {
 .picker__footer .clockpicker-button {
     margin: auto;
     margin-top: .9375rem;
+    padding: 6px 8px;
     text-transform: uppercase;
-    background-color: transparent
+    background-color: transparent;
+    font-size: 1rem
 }
 
 .picker__footer .clockpicker-button:focus {
@@ -26980,6 +27684,198 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .darktheme .picker__box .picker__footer .clockpicker-button:active {
     background-color: rgba(255, 64, 129, 0.25)
+}
+
+div.picker.datepicker .picker__holder.inline {
+    position: unset
+}
+
+div.picker.datepicker .picker__holder.inline .picker__header {
+    padding-top: 10px
+}
+
+div.picker.datepicker .picker__box {
+    border: none;
+    border-radius: 5px
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box {
+    text-align: left
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display {
+    height: 115px;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    padding: 0;
+    margin-bottom: 10px
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display .picker__title-display {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: .7rem
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display .picker__date-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-left: 20px;
+    margin-bottom: 15px
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display .picker__date-container .picker__weekday-display {
+    padding: 0;
+    margin: 0
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display .picker__date-container .picker__month-display {
+    padding: 0;
+    padding-left: 0.5rem;
+    margin: 0
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__date-display .picker__date-container .picker__day-display {
+    padding: 0;
+    padding-left: 0.5rem;
+    margin: 0
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__select-year {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    color: #666
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__select-year:hover {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__select-year:focus {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__select-year i {
+    margin-left: 0.2rem
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav {
+    float: right
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--prev {
+    left: unset;
+    right: 3rem;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--prev:hover {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--prev:focus {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--prev:before {
+    content: "\f053"
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--next {
+    right: 0.5rem;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--next:before {
+    content: "\f054"
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--next:hover {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__header.datepicker__box .picker__nav .picker__nav--next:focus {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__table {
+    min-height: 267px;
+    padding: .5rem
+}
+
+div.picker.datepicker .picker__box .picker__table .picker__day.picker__day--infocus {
+    border-radius: 50%
+}
+
+div.picker.datepicker .picker__box .picker__table .picker__day.picker__day--infocus:hover:not(.picker__day--selected) {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box .picker__table .picker__day--today {
+    border: 1px solid #666
+}
+
+div.picker.datepicker .picker__box .picker__table .picker__year.picker__year--infocus {
+    padding: .75rem 0;
+    border-radius: 30px
+}
+
+div.picker.datepicker .picker__box .picker__table .picker__year.picker__year--infocus:hover:not(.picker__year--selected) {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box div.picker__footer {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 10px
+}
+
+div.picker.datepicker .picker__box div.picker__footer button {
+    border-radius: 10px;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 6px 8px;
+    font-size: .8rem;
+    min-width: 64px
+}
+
+div.picker.datepicker .picker__box div.picker__footer button:hover {
+    background: #eee
+}
+
+div.picker.datepicker .picker__box div.picker__footer button.picker__picker-button--clear {
+    margin-right: auto
+}
+
+div.picker.datepicker .picker__box div.picker__footer button.picker__picker-button--clear:focus {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box div.picker__footer button.picker__picker-button--close:focus {
+    background-color: #eee
+}
+
+div.picker.datepicker .picker__box div.picker__footer button.picker__picker-button--ok:focus {
+    background-color: #eee
 }
 
 .picker__box {
@@ -27253,7 +28149,8 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .picker__box .picker__footer .picker__button--today,
 .picker__box .picker__footer .picker__button--clear,
-.picker__box .picker__footer .picker__button--close {
+.picker__box .picker__footer .picker__button--close,
+.picker__box .picker__footer .picker__button--ok {
     display: inline-block;
     width: 33%;
     padding: 1rem 0 0.7rem 0;
@@ -27267,7 +28164,8 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .picker__box .picker__footer .picker__button--today:hover,
 .picker__box .picker__footer .picker__button--clear:hover,
-.picker__box .picker__footer .picker__button--close:hover {
+.picker__box .picker__footer .picker__button--close:hover,
+.picker__box .picker__footer .picker__button--ok:hover {
     color: #000;
     cursor: pointer;
     background: #b1dcfb;
@@ -27276,7 +28174,8 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .picker__box .picker__footer .picker__button--today:focus,
 .picker__box .picker__footer .picker__button--clear:focus,
-.picker__box .picker__footer .picker__button--close:focus {
+.picker__box .picker__footer .picker__button--close:focus,
+.picker__box .picker__footer .picker__button--ok:focus {
     background: #b1dcfb;
     border-color: rgba(0, 0, 0, 0.05);
     outline: none
@@ -27284,19 +28183,22 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .picker__box .picker__footer .picker__button--today:before,
 .picker__box .picker__footer .picker__button--clear:before,
-.picker__box .picker__footer .picker__button--close:before {
+.picker__box .picker__footer .picker__button--close:before,
+.picker__box .picker__footer .picker__button--ok:before {
     position: relative;
     display: inline-block;
     height: 0
 }
 
 .picker__box .picker__footer .picker__button--today:before,
+.picker__box .picker__footer .picker__button--ok:before,
 .picker__box .picker__footer .picker__button--clear:before {
     margin-right: .45em;
     content: " "
 }
 
-.picker__box .picker__footer .picker__button--today:before {
+.picker__box .picker__footer .picker__button--today:before,
+.picker__box .picker__footer .picker__button--ok:before {
     top: -.05em;
     width: 0;
     border-top: .66em solid #0059bc;
@@ -27336,6 +28238,15 @@ ul.stepper li.completed a .grey-skin .circle {
 
 .picker__calendar-container thead {
     border: none
+}
+
+div.datepicker input {
+    cursor: auto
+}
+
+div.datepicker input~i.input-prefix {
+    cursor: pointer;
+    pointer-events: all
 }
 
 .fixed-sn .double-nav,
@@ -27806,3 +28717,6 @@ ul.stepper li.completed a .grey-skin .circle {
 .contact-section .contact .far {
     color: #6b89a5
 }
+
+
+/*# sourceMappingURL=mdb.min.css.map*/
