@@ -59,7 +59,6 @@ Style Index
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -72,8 +71,9 @@ body {
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-/*   background-color: #f1f7fa;
- */  background-color: #eaedf7;
+  /*   background-color: #f1f7fa;
+ */
+  background-color: #eaedf7;
   zoom: 80%;
   zoom: 0.80;
   /*   -moz-transform: scale(0.85);
@@ -105,7 +105,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: #8182a8;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -197,6 +196,15 @@ h6 {
   background-color: #000;
 }
 
+.card {
+  box-shadow: 0px 14px 22px -9px #bbcbd8;
+}
+
+.unique-color-dark {
+  background-color: #1c2331 !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
 .card-list li.page-item {
   height: 36px;
 }
@@ -285,7 +293,6 @@ label.btn input[type="checkbox"]+label {
   height: 100%;
   width: 280px;
   z-index: 9999;
-  -webkit-box-shadow: 7px 2px 14px 0 rgba(0, 0, 0, .14);
   box-shadow: 7px 2px 14px 0 rgba(0, 0, 0, .14);
 }
 
@@ -343,7 +350,6 @@ label.btn input[type="checkbox"]+label {
   background: #fff;
   border-left: 1px solid #eee;
   top: 15%;
-  -webkit-box-shadow: -5px 2px 10px 0 rgba(0, 0, 0, .14);
   box-shadow: -5px 2px 10px 0 rgba(0, 0, 0, .14);
 }
 
@@ -355,7 +361,6 @@ label.btn input[type="checkbox"]+label {
   height: 20px;
   width: 20px;
   margin: 5px 10px;
-  -webkit-box-shadow: 0.4px 0.9px 3px 0 rgba(0, 0, 0, .33);
   box-shadow: 0.4px 0.9px 3px 0 rgba(0, 0, 0, .33);
 }
 
@@ -398,9 +403,7 @@ label.btn input[type="checkbox"]+label {
 .browser-default li option:hover {
   color: #fff !important;
   border-radius: .125rem;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-transition: .15s;
   transition: .15s;
 }
 
@@ -464,32 +467,26 @@ label.btn input[type="checkbox"]+label {
 
 @keyframes slideRight {
   0% {
-    -webkit-transform: translateX(-150%);
     transform: translateX(-150%)
   }
 
   50% {
-    -webkit-transform: translateX(8%);
     transform: translateX(8%)
   }
 
   65% {
-    -webkit-transform: translateX(-4%);
     transform: translateX(-4%)
   }
 
   80% {
-    -webkit-transform: translateX(4%);
     transform: translateX(4%)
   }
 
   95% {
-    -webkit-transform: translateX(-2%);
     transform: translateX(-2%)
   }
 
   100% {
-    -webkit-transform: translateX(0%);
     transform: translateX(0%)
   }
 }
@@ -532,32 +529,26 @@ label.btn input[type="checkbox"]+label {
 
 @keyframes slideLeft {
   0% {
-    -webkit-transform: translateX(150%);
     transform: translateX(150%)
   }
 
   50% {
-    -webkit-transform: translateX(-8%);
     transform: translateX(-8%)
   }
 
   65% {
-    -webkit-transform: translateX(4%);
     transform: translateX(4%)
   }
 
   80% {
-    -webkit-transform: translateX(-4%);
     transform: translateX(-4%)
   }
 
   95% {
-    -webkit-transform: translateX(2%);
     transform: translateX(2%)
   }
 
   100% {
-    -webkit-transform: translateX(0%);
     transform: translateX(0%)
   }
 }
@@ -602,37 +593,30 @@ label.btn input[type="checkbox"]+label {
 
 @keyframes stretchLeft {
   0% {
-    -webkit-transform: scaleX(0.3);
     transform: scaleX(0.3)
   }
 
   40% {
-    -webkit-transform: scaleX(1.02);
     transform: scaleX(1.02)
   }
 
   60% {
-    -webkit-transform: scaleX(0.98);
     transform: scaleX(0.98)
   }
 
   80% {
-    -webkit-transform: scaleX(1.01);
     transform: scaleX(1.01)
   }
 
   100% {
-    -webkit-transform: scaleX(0.98);
     transform: scaleX(0.98)
   }
 
   80% {
-    -webkit-transform: scaleX(1.01);
     transform: scaleX(1.01)
   }
 
   100% {
-    -webkit-transform: scaleX(1);
     transform: scaleX(1)
   }
 }
@@ -702,7 +686,6 @@ label.btn input[type="checkbox"]+label {
   top: 0;
   left: -250px;
   z-index: 999;
-  -webkit-transition: left .3s ease, width .3s ease;
   transition: left .3s ease, width .3s ease;
 }
 
@@ -714,12 +697,10 @@ label.btn input[type="checkbox"]+label {
 
 .sidebar-wrapper a {
   text-decoration: none;
-  -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
 
 .sidebar-wrapper .sidebar-item {
-  -webkit-transition: all .3s linear;
   transition: all .3s linear;
 }
 
@@ -755,11 +736,7 @@ label.btn input[type="checkbox"]+label {
 
 .sidebar-wrapper .sidebar-brand {
   padding: 1rem 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 55px;
 }
@@ -767,8 +744,6 @@ label.btn input[type="checkbox"]+label {
 .sidebar-wrapper .sidebar-brand>a {
   text-transform: uppercase;
   font-weight: bold;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -828,7 +803,6 @@ label.btn input[type="checkbox"]+label {
 }
 
 .sidebar-wrapper .sidebar-search .input-group {
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
@@ -849,13 +823,8 @@ label.btn input[type="checkbox"]+label {
 }
 
 .sidebar-wrapper .sidebar-menu ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
   position: relative;
@@ -876,17 +845,13 @@ label.btn input[type="checkbox"]+label {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a .menu-text {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   white-space: nowrap;
   text-overflow: ellipsis;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
   overflow: hidden;
 }
@@ -906,10 +871,7 @@ label.btn input[type="checkbox"]+label {
   position: absolute;
   right: 15px;
   top: 14px;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu {
@@ -951,7 +913,6 @@ label.btn input[type="checkbox"]+label {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active>a:after {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   right: 15px;
 }
@@ -960,27 +921,19 @@ label.btn input[type="checkbox"]+label {
   position: absolute;
   width: 100%;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .sidebar-wrapper .sidebar-footer>div {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: center;
   height: 35px;
   line-height: 35px;
   position: static;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .sidebar-wrapper .sidebar-footer>div>a {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -998,7 +951,6 @@ label.btn input[type="checkbox"]+label {
   left: 0;
   top: initial !important;
   right: 0 !important;
-  -webkit-transform: none !important;
   transform: none !important;
   border-radius: 0;
   font-size: .9rem;
@@ -1013,8 +965,6 @@ label.btn input[type="checkbox"]+label {
 }
 
 .sidebar-wrapper .sidebar-footer .messages .message-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1056,8 +1006,6 @@ label.btn input[type="checkbox"]+label {
 }
 
 .sidebar-wrapper .sidebar-footer .notifications .notification-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1204,7 +1152,6 @@ label.btn input[type="checkbox"]+label {
 .dark-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #2b2b2b;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1360,7 +1307,6 @@ label.btn input[type="checkbox"]+label {
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #374140;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1471,7 +1417,6 @@ label.btn input[type="checkbox"]+label {
 .legacy-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #2e333c;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1582,7 +1527,6 @@ label.btn input[type="checkbox"]+label {
 .cool-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #46454c;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1693,7 +1637,6 @@ label.btn input[type="checkbox"]+label {
 .ice-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #3a4d56;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1804,7 +1747,6 @@ label.btn input[type="checkbox"]+label {
 .light-theme .sidebar-wrapper .sidebar-search .input-group-text {
   background-color: #f9f9f9;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin-right: 1px;
 }
@@ -1892,27 +1834,22 @@ label.btn input[type="checkbox"]+label {
   50%,
   70%,
   100% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   10% {
-    -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
   }
 
   40% {
-    -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
 
   60% {
-    -webkit-transform: rotate(5deg);
     transform: rotate(5deg);
   }
 
   80% {
-    -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);
   }
 }
@@ -1924,40 +1861,33 @@ label.btn input[type="checkbox"]+label {
   50%,
   70%,
   100% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   10% {
-    -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
   }
 
   40% {
-    -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
 
   60% {
-    -webkit-transform: rotate(5deg);
     transform: rotate(5deg);
   }
 
   80% {
-    -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);
   }
 }
 
 @-webkit-keyframes sonar {
   0% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
     opacity: 1;
   }
 
   100% {
-    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0;
   }
@@ -1965,13 +1895,11 @@ label.btn input[type="checkbox"]+label {
 
 @keyframes sonar {
   0% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
     opacity: 1;
   }
 
   100% {
-    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0;
   }
@@ -1982,7 +1910,6 @@ label.btn input[type="checkbox"]+label {
   width: 100%;
   padding: 20px;
   min-height: 100vh;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -1991,7 +1918,6 @@ label.btn input[type="checkbox"]+label {
   background: #fff;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -2086,22 +2012,13 @@ label.btn input[type="checkbox"]+label {
   width: 25px;
   height: 25px;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 330ms ease-out;
-  transition: -webkit-transform 330ms ease-out;
   transition: transform 330ms ease-out;
-  transition: transform 330ms ease-out, -webkit-transform 330ms ease-out;
 }
 
 .wrapper-menu.open {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -2117,32 +2034,21 @@ label.btn input[type="checkbox"]+label {
 }
 
 .line-menu.start {
-  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  -webkit-transform-origin: right;
   transform-origin: right;
 }
 
 .open .line-menu.start {
-  -webkit-transform: rotate(-90deg) translateX(-10px);
   transform: rotate(-90deg) translateX(-10px);
 }
 
 .line-menu.end {
-  -ms-flex-item-align: end;
   align-self: flex-end;
-  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  -webkit-transform-origin: left;
   transform-origin: left;
 }
 
 .open .line-menu.end {
-  -webkit-transform: rotate(-90deg) translateX(10px);
   transform: rotate(-90deg) translateX(10px);
 }
 
@@ -2155,7 +2061,6 @@ label.btn input[type="checkbox"]+label {
 }
 
 .white-skin .navbar {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
 
@@ -2169,7 +2074,6 @@ label.btn input[type="checkbox"]+label {
 .page-wrapper .page-content {
   display: inline-block;
   width: 100%;
-  -webkit-transition: padding-left .3s ease;
   transition: padding-left .3s ease;
   overflow-x: hidden;
 }
@@ -2257,10 +2161,7 @@ label.btn input[type="checkbox"]+label {
 }
 
 .breadcrumb {
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0.50rem 1rem;
   margin-bottom: 0;
@@ -2314,79 +2215,82 @@ label.btn input[type="checkbox"]+label {
 /*--------------------------------------------------
   [5. app chat page ]
   --------------------------------------------------*/
-  .app-chat .inbox_chat {
-    height: 750px;
-    overflow: hidden;
-  }
-  
-  .app-chat .card.inbox_people {
-    float: left;
-    overflow: hidden;
-    width: 40%;
-    border-right: 1px solid #cdcdcd;
-  }
-  
-  .app-chat .card.card-messages {
-    height: 100%;
-    width: 60%;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .app-chat .inbox_msg {
-    clear: both;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-  
-  .app-chat .inbox_msg .card{
-    box-shadow: unset;
-  }
-  
-  .app-chat .chat-custom-scrollbar {
-    position: relative;
-  }
-  
-  .app-chat .card-img-35 {
-    width: 35px;
-  }
-  
-  .app-chat .dataTables_filter {
-    padding-right: 5px;
-  }
-  
-  .app-chat .dataTables_length {
-    padding-left: 5px;
-  }
-  
-  .app-chat .chat-msg {
-    width: fit-content;
-  }
-  
-  .app-chat .chat-msg.chat-msg-sent {
-    float: right;
-  }
-  
-  .app-chat div.dataTables_wrapper div.dataTables_info, div.dataTables_wrapper div.dataTables_paginate {
-    font-size: 0.8rem;
-    white-space: inherit;
-  }
-  
-  .app-chat .spinner-grow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
-  }
-  
-  .app-chat #chatMessageCreateForm button {
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-  }
+.app-chat .inbox_chat {
+  height: 750px;
+  overflow: hidden;
+}
+
+.app-chat .card.inbox_people {
+  float: left;
+  overflow: hidden;
+  width: 40%;
+  border-right: 1px solid #cdcdcd;
+}
+
+.app-chat .card.card-messages {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.app-chat .inbox_msg {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.app-chat .inbox_msg .card {
+  box-shadow: unset;
+}
+
+.app-chat .chat-custom-scrollbar {
+  position: relative;
+}
+
+.app-chat .card-img-35 {
+  width: 35px;
+}
+
+.app-chat .dataTables_filter {
+  padding-right: 5px;
+}
+
+.app-chat .dataTables_length {
+  padding-left: 5px;
+}
+
+.app-chat .chat-msg {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.app-chat .chat-msg.chat-msg-sent {
+  float: right;
+}
+
+.app-chat div.dataTables_wrapper div.dataTables_info,
+div.dataTables_wrapper div.dataTables_paginate {
+  font-size: 0.8rem;
+  white-space: inherit;
+}
+
+.app-chat .spinner-grow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+}
+
+.app-chat #chatMessageCreateForm button {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
 
 
 
@@ -2585,10 +2489,7 @@ label.btn input[type="checkbox"]+label {
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
   transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -2597,18 +2498,15 @@ label.btn input[type="checkbox"]+label {
 }
 
 .hamRotate.active {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .hamRotate180.active {
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .line {
   fill: none;
-  -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: #1c67a2;
   stroke-width: 3.5px;
@@ -2688,6 +2586,30 @@ label.btn input[type="checkbox"]+label {
   font-size: 14px !important
 }
 
+::-webkit-input-placeholder {
+  color: #BDBDBD;
+  opacity: 1;
+  font-weight: 300
+}
+
+::-moz-placeholder {
+  color: #BDBDBD;
+  opacity: 1;
+  font-weight: 300
+}
+
+:-ms-input-placeholder {
+  color: #BDBDBD;
+  opacity: 1;
+  font-weight: 300
+}
+
+::-ms-input-placeholder {
+  color: #BDBDBD;
+  opacity: 1;
+  font-weight: 300
+}
+
 ::placeholder {
   color: #BDBDBD;
   opacity: 1;
@@ -2720,16 +2642,12 @@ textarea {
 
 input:focus,
 textarea:focus {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: 1px solid #304FFE;
   outline-width: 0
 }
 
 button:focus {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   outline-width: 0
 }
@@ -2758,29 +2676,20 @@ a {
 
 @media screen and (max-width: 991px) {
   .logo {
-      margin-left: 0px
+    margin-left: 0px
   }
 
   .image {
-      width: 300px;
-      height: 220px
+    width: 300px;
+    height: 220px
   }
 
   .border-line {
-      border-right: none
+    border-right: none
   }
 
   .card2 {
-      border-top: 1px solid #EEEEEE !important;
-      margin: 0px 15px
+    border-top: 1px solid #EEEEEE !important;
+    margin: 0px 15px
   }
 }
-
-
-
-
-
-
-
-
-
