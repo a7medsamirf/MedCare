@@ -1,8 +1,8 @@
 /*
-Template Name: Medala Solution | Personal Portfolio HTML5 Template
+Template Name: MedCare | Personal Portfolio HTML5 Template
 Author: Ahmed Samir
 Author URI: https://www.facebook.com/a7med.samir.f
-Description: Medala Solution | Personal Portfolio HTML5 Template
+Description: MedCare | Personal Portfolio HTML5 Template
 Version: 1.0
 Tags: bootstrap, clean, creative, cv, freelancer, gallery, html5, one page, personal, portfolio, responsive, resume, simple, vcard
 
@@ -16,11 +16,9 @@ Style Index
     3. Navigation Bar
     3. page content
     4. login page
-    5. WHAT'S ON Section
-    6. About Section
-    7. Now Showing Section
-    8. Blog Post Section
-    9. Newsletter Section
+    5. app chat page
+    6. all doctors page
+
     10. Footer Section
     11. Media Query Section
 */
@@ -2188,11 +2186,8 @@ label.btn input[type="checkbox"]+label {
   --------------------------------------------------*/
 
 #login-page {
-  display: table;
-  width: 100%;
-  height: 100vh;
-  background: url(../img/login.jpg) repeat-x fixed;
-  background-size: cover;
+
+  background-color: #fff;
 }
 
 #login-page .bg-title {
@@ -2212,6 +2207,16 @@ label.btn input[type="checkbox"]+label {
   top: 5px;
 }
 
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background: url(../img/login.jpg) repeat-x fixed;
+  background-size: cover;
+    background-position: center center;
+}
 /*--------------------------------------------------
   [5. app chat page ]
   --------------------------------------------------*/
@@ -2293,8 +2298,19 @@ div.dataTables_wrapper div.dataTables_paginate {
 }
 
 
+/*--------------------------------------------------
+  [6. all doctors page ]
+  --------------------------------------------------*/
+.All-Doctor
+{
+  position: relative;
+}
 
-
+.All-Doctor .mdb-color.lighten-3 {
+  color: #ffffff;
+  background-color: var(--maincolor) !important;
+  background: linear-gradient(40deg, var(--maincolor), var(--mainbackground)) !important;
+}
 
 
 .fixed-menu .choose-skin li {
